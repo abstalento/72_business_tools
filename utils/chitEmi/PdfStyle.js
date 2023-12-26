@@ -1,0 +1,281 @@
+import { padding } from "@mui/system"
+import { StyleSheet } from "@react-pdf/renderer"
+export default StyleSheet.create({
+
+  chitheader:{
+    backgroundColor:'#FF76B6',
+    display:'flex',
+    flexDirection:'row',
+    height:'100px',
+    paddingLeft:'13px',
+    paddingRight:'13px',
+    justifyContent:'space-between',
+    alignItems:'center'
+  },
+  bonusHeadRight:{
+    width:'180px',
+    color:'white',
+    height:'40px',
+    justifyContent:'space-between',
+    fontSize:'16px',
+    textAlign:'right',
+    display:'flex',
+    fontFamily: 'Helvetica-Bold',
+    flexDirection:'column'
+  },
+    bonusContent:{
+      marginTop:'40px',
+      marginLeft:'100px',
+    },
+    bonusTabelHead:{
+      backgroundColor:'black',
+      color:'white',
+      height:'35px',
+      display:'flex',
+      alignItems:'center',
+      flexDirection:'row',
+      fontSize:'10px',
+      width:'85%',
+      borderTopLeftRadius:'5px',
+      borderTopRightRadius:'5px',
+      fontFamily: 'Helvetica-Bold',
+    },
+    bonusHeadNo:{
+      width:'50px',
+      textAlign:'center'
+    },
+    bonusHeadCategory:{
+      width:'250px',
+      textAlign:'center'
+    },
+    bonusHeadValue:{
+      width:'100px',
+      textAlign:'center'
+    },
+    bonusTabelBody:{
+      borderLeft:'2px',
+      borderRight:'2px',
+      borderBottom:'2px',
+      width:'85%',
+      display:'flex',
+      flexDirection:'row',
+      height:'120px',
+      fontSize:'12px'
+    },
+    bonusBodyNo:{
+      width:'50px',
+      textAlign:'center',
+      paddingBottom:'5px',
+      paddingTop:'5px',
+      display:'flex',
+      flexDirection:'column',
+      justifyContent:'space-around',
+      borderRight:'1px',
+      borderStyle: 'dashed'
+    },
+    bonusBodyCategory:{
+      width:'250px',
+      paddingLeft:'20px',
+      paddingBottom:'5px',
+      paddingTop:'5px',
+      display:'flex',
+      flexDirection:'column',
+      justifyContent:'space-around',
+      borderRight:'1px',
+      borderStyle: 'dashed'
+    },
+    bonusBodyValue:{
+      width:'100px',
+      textAlign:'center',
+      paddingBottom:'5px',
+      paddingTop:'5px',
+      display:'flex',
+      flexDirection:'column',
+      justifyContent:'space-around',
+    },
+
+
+    emiContent:{
+      marginTop:'40px',
+      paddingLeft:'13px',
+      paddingRight:'13px',
+      width:'100%'
+    },
+    emiTabelHead:{
+      backgroundColor:'black',
+      color:'white',
+      height:'32px',
+      display:'flex',
+      alignItems:'center',
+      flexDirection:'row',
+      fontSize:'8px',
+      width:'100%',
+      borderRadius:'5px',
+      fontFamily: 'Helvetica-Bold',
+    },
+    emiHeadNo:{
+      width:'70px',
+      textAlign:'center'
+    },
+    emiHeadMonth:{
+      width:'100px',
+      textAlign:'center'
+    },
+    emiHeadPrincipal:{
+      width:'100px',
+      textAlign:'center'
+    },
+    emiHeadInterest:{
+      width:'100px',
+      textAlign:'center'
+    },
+    emiHeadTotalPay:{
+      width:'100px',
+      textAlign:'center'
+    },
+    emiHeadBalance:{
+      width:'100px',
+      textAlign:'center'
+    },
+    emiLoanPaid:{
+      width:'120px',
+      textAlign:'center',
+      paddingRight:'10px'
+    },
+
+    emiTabelBody:{
+      height:'32px',
+      display:'flex',
+      alignItems:'center',
+      flexDirection:'row',
+      fontSize:'11px',
+      width:'100%',
+      fontFamily: 'Helvetica',
+    },
+    emiHeadNo:{
+      width:'70px',
+      textAlign:'center'
+    },
+    emiHeadMonth:{
+      width:'100px',
+    },
+    emiHeadPrincipal:{
+      width:'100px',
+      textAlign:'center'
+    },
+    emiHeadInterest:{
+      width:'100px',
+      textAlign:'center'
+    },
+    emiHeadTotalPay:{
+      width:'100px',
+      textAlign:'center'
+    },
+    emiHeadBalance:{
+      width:'100px',
+      textAlign:'center'
+    },
+    emiLoanPaid:{
+      width:'120px',
+      textAlign:'center',
+      paddingRight:'10px'
+    },
+
+
+
+    auctContent:{
+      marginTop:'40px',
+      paddingLeft:'13px',
+      paddingRight:'13px',
+      width:'100%'
+    },
+    auctTabelHead:{
+      backgroundColor:'black',
+      color:'white',
+      height:'32px',
+      display:'flex',
+      alignItems:'center',
+      flexDirection:'row',
+      fontSize:'8px',
+      width:'100%',
+      borderRadius:'5px',
+      fontFamily: 'Helvetica-Bold',
+    },
+    auctHeadNo:{
+      width:'50px',
+      textAlign:'center'
+    },
+    auctInterestValue:{
+      width:'130px',
+      textAlign:'center'
+    },
+    auctAucAmount:{
+      width:'130px',
+      textAlign:'center'
+    },
+    auctHeadInstallment:{
+      width:'130px',
+      textAlign:'center'
+    },
+    auctHeadCommission:{
+      width:'130px',
+      textAlign:'center'
+    },
+
+    auctTabelBody:{
+      height:'28px',
+      display:'flex',
+      alignItems:'center',
+      flexDirection:'row',
+      fontSize:'11px',
+      width:'100%',
+      fontFamily: 'Helvetica',
+    },
+    auctBodyNo:{
+      width:'50px',
+      textAlign:'center'
+    },
+    auctBodyInterest:{
+      width:'130px',
+      textAlign:'center'
+    },
+    auctBodyAucAmount:{
+      width:'130px',
+      textAlign:'center'
+    },
+    auctBodyInstallment:{
+      width:'130px',
+      textAlign:'center'
+    },
+    auctBodyCommission:{
+      width:'130px',
+      textAlign:'center'
+    },
+
+
+
+
+    footerImage: {
+        display:'flex',
+        flexDirection:'row',
+        justifyContent:'space-around',
+        alignItems:'center',
+        width:'33%'
+      },
+      pdfFooterContent:{
+        fontSize:'8px',
+      },
+      pdfFooter:{
+        display:'flex',
+        flexDirection:'row',
+        justifyContent:'flex-end',
+        alignItems:'center',
+        paddingLeft:'12px',
+        paddingRight:'12px',
+        paddingTop:'6px',
+        paddingBottom:'6px',
+        backgroundColor:'#F3F3F3'
+      },
+      
+
+})

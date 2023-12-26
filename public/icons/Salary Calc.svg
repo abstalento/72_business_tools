@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <g id="Salary_Calc" data-name="Salary Calc" transform="translate(-0.377 -0.377)">
+    <circle id="Ellipse_2" data-name="Ellipse 2" cx="30" cy="30" r="30" transform="translate(0.377 0.377)" fill="#ffa950"/>
+    <path id="Path_33907" data-name="Path 33907" d="M165.734,101.265a30.377,30.377,0,0,0-.3-4.232L150.549,82.143a4.44,4.44,0,0,0-3.323-1.5h-23.15a4.466,4.466,0,0,0-4.451,4.454v32.337a4.441,4.441,0,0,0,1.348,3.184l10.482,10.461a30.091,30.091,0,0,0,34.279-29.813Z" transform="translate(-105.357 -70.994)" fill="#c96e10"/>
+    <path id="Path_33908" data-name="Path 33908" d="M147.457,122.2H124.113a4.5,4.5,0,0,1-4.488-4.488V85.13a4.5,4.5,0,0,1,4.488-4.488h23.344a4.5,4.5,0,0,1,4.488,4.488v32.583A4.5,4.5,0,0,1,147.457,122.2Z" transform="translate(-105.357 -70.994)" fill="#e71343"/>
+    <path id="Path_33909" data-name="Path 33909" d="M272.161,85.129v32.582a4.5,4.5,0,0,1-4.489,4.489H256V80.64h11.672A4.5,4.5,0,0,1,272.161,85.129Z" transform="translate(-225.572 -70.992)" fill="#a20025"/>
+    <rect id="Rectangle_7324" data-name="Rectangle 7324" width="24.751" height="7.706" transform="translate(18.052 14.191)" fill="#fff"/>
+    <path id="Path_33910" data-name="Path 33910" d="M168.86,219.208h-5.979a2.222,2.222,0,0,1-2.222-2.222v-5.5a2.222,2.222,0,0,1,2.222-2.222h5.979a2.222,2.222,0,0,1,2.222,2.222v5.5A2.222,2.222,0,0,1,168.86,219.208Z" transform="translate(-141.529 -184.371)" fill="#00acea"/>
+    <rect id="Rectangle_7325" data-name="Rectangle 7325" width="5.56" height="1.38" transform="translate(21.562 29.173)" fill="#fff"/>
+    <path id="Path_33911" data-name="Path 33911" d="M271.583,319.012H265.6a2.222,2.222,0,0,1-2.222-2.222v-5.5a2.222,2.222,0,0,1,2.222-2.222h5.979a2.222,2.222,0,0,1,2.222,2.222v5.5A2.222,2.222,0,0,1,271.583,319.012Z" transform="translate(-232.079 -272.348)" fill="#e67500"/>
+    <g id="Group_18167" data-name="Group 18167" transform="translate(33.734 38.452)">
+      <rect id="Rectangle_7326" data-name="Rectangle 7326" width="5.56" height="1.38" transform="translate(0 2.549)" fill="#fff5cb"/>
+      <circle id="Ellipse_3" data-name="Ellipse 3" cx="0.942" cy="0.942" r="0.942" transform="translate(1.838)" fill="#fff5cb"/>
+      <circle id="Ellipse_4" data-name="Ellipse 4" cx="0.942" cy="0.942" r="0.942" transform="translate(1.838 4.593)" fill="#fff5cb"/>
+    </g>
+    <path id="Path_33912" data-name="Path 33912" d="M271.583,219.208H265.6a2.222,2.222,0,0,1-2.222-2.222v-5.5a2.222,2.222,0,0,1,2.222-2.222h5.979a2.222,2.222,0,0,1,2.222,2.222v5.5A2.222,2.222,0,0,1,271.583,219.208Z" transform="translate(-232.079 -184.371)" fill="#0070b4"/>
+    <path id="Path_33913" data-name="Path 33913" d="M289.461,229.864h-2.09v-2.09h-1.38v2.09H283.9v1.38h2.09v2.09h1.38v-2.09h2.09Z" transform="translate(-250.167 -200.691)" fill="#fff5cb"/>
+    <path id="Path_33914" data-name="Path 33914" d="M168.86,319.012h-5.979a2.222,2.222,0,0,1-2.222-2.222v-5.5a2.222,2.222,0,0,1,2.222-2.222h5.979a2.222,2.222,0,0,1,2.222,2.222v5.5A2.222,2.222,0,0,1,168.86,319.012Z" transform="translate(-141.529 -272.348)" fill="#00acea"/>
+    <path id="Path_33915" data-name="Path 33915" d="M188.839,334.266l-1.478-1.478,1.478-1.478-.975-.975-1.478,1.478-1.478-1.478-.976.975,1.478,1.478-1.478,1.478.976.976,1.478-1.478,1.478,1.478Z" transform="translate(-162.044 -291.097)" fill="#fff"/>
+    <rect id="Rectangle_7327" data-name="Rectangle 7327" width="12.376" height="7.707" transform="translate(30.428 14.191)" fill="#f3dcdc"/>
+  </g>
+</svg>

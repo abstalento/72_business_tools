@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+  <g id="Export" transform="translate(-1.999 -1)">
+    <rect id="Rectangle_7289" data-name="Rectangle 7289" width="34" height="34" rx="5" transform="translate(1.999 1)" fill="#456ff8"/>
+    <g id="Group_18319" data-name="Group 18319" transform="translate(8.999 7)">
+      <g id="Calendar" transform="translate(0)">
+        <path id="Stroke_1" data-name="Stroke 1" d="M0,9.879C0,2.469,2.47,0,9.879,0s9.88,2.469,9.88,9.879-2.47,9.879-9.88,9.879S0,17.289,0,9.879Z" transform="translate(0 1.546)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Stroke_3" data-name="Stroke 3" d="M0,.5H19.183" transform="translate(0.293 7.249)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Stroke_5" data-name="Stroke 5" d="M.5.5h.01" transform="translate(14.076 11.443)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Stroke_7" data-name="Stroke 7" d="M.5.5h.01" transform="translate(9.39 11.443)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Stroke_9" data-name="Stroke 9" d="M.5.5h.01" transform="translate(4.694 11.443)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Stroke_11" data-name="Stroke 11" d="M.5.5h.01" transform="translate(14.076 15.546)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Stroke_13" data-name="Stroke 13" d="M.5.5h.01" transform="translate(9.39 15.546)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Stroke_15" data-name="Stroke 15" d="M.5.5h.01" transform="translate(4.694 15.546)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Stroke_17" data-name="Stroke 17" d="M.5,0V3.475" transform="translate(13.65)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Stroke_19" data-name="Stroke 19" d="M.5,0V3.475" transform="translate(5.119)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+.noScrollbar::-webkit-scrollbar {
+    display: none;
+    
+  }
+  .noScrollbar {
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .er{
+    color: aquamarine;
+  }

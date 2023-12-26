@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="68.267" viewBox="0 0 60 68.267">
+  <g id="Group_18240" data-name="Group 18240" transform="translate(-92 -1057)">
+    <g id="stopwatch" transform="translate(61 1057)">
+      <path id="Path_34014" data-name="Path 34014" d="M391.424,90.827a2,2,0,0,1-1.414-3.414l5.654-5.654a2,2,0,0,1,2.828,2.828l-5.654,5.654A1.994,1.994,0,0,1,391.424,90.827Z" transform="translate(-310.634 -70.35)" fill="#fc5d3d"/>
+      <path id="Path_34015" data-name="Path 34015" d="M245,2v8.267a2,2,0,1,1-4,0V2a2,2,0,1,1,4,0Z" transform="translate(-182)" fill="#fc5d3d"/>
+      <path id="Path_34017" data-name="Path 34017" d="M61,62A30,30,0,1,0,91,92,30.033,30.033,0,0,0,61,62Z" transform="translate(0 -53.733)" fill="#fc5d3d"/>
+      <path id="Path_34019" data-name="Path 34019" d="M113,122a22,22,0,1,0,22,22A22.025,22.025,0,0,0,113,122Z" transform="translate(-52 -105.733)" fill="#f0f7ff"/>
+      <path id="Path_34021" data-name="Path 34021" d="M243,220.871a2,2,0,0,1-1.414-3.414l8.481-8.481A2,2,0,0,1,252.9,211.8l-8.481,8.481a1.994,1.994,0,0,1-1.414.586Z" transform="translate(-182 -180.604)" fill="#f03800"/>
+      <path id="Path_34022" data-name="Path 34022" d="M223,2a2,2,0,0,1-2,2h-8a2,2,0,1,1,0-4h8A2,2,0,0,1,223,2Z" transform="translate(-156 0)" fill="#fc5d3d"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="199.596" height="37" viewBox="0 0 199.596 37">
+  <g id="Buttons" transform="translate(-1650.29 -84)">
+    <g id="Group_17349" data-name="Group 17349" transform="translate(1748.173 84)">
+      <rect id="Rectangle_7112" data-name="Rectangle 7112" width="199.596" height="37" rx="4" transform="translate(-97.883)" fill="#3d5afe"/>
+      <g id="Group_17961" data-name="Group 17961" transform="translate(-3.883 8)">
+        <text id="Create_New_Project" data-name="Create New Project" transform="translate(60 16)" fill="#fff" font-size="17" font-family="SFProDisplay-Medium, SF Pro Display" font-weight="500" letter-spacing="-0.024em"><tspan x="-133" y="0">Create New Project</tspan></text>
+        <path id="plus_2_" data-name="plus (2)" d="M10.983,5.2H6.359V.578A.578.578,0,0,0,5.2.578V5.2H.578a.578.578,0,0,0,0,1.156H5.2v4.625a.578.578,0,1,0,1.156,0V6.359h4.625a.578.578,0,1,0,0-1.156Zm0,0" transform="translate(74 4.568)" fill="#fff" stroke="#fff" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

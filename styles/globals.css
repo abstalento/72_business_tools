@@ -1,0 +1,249 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+@font-face {
+  font-family: "Sf-pro-semibold";
+  src: url("../public/font/SF-Pro-Display-Semibold.ttf");
+}
+@font-face {
+  font-family: "sf-pro-light";
+  src: url("../public/font/SF-Pro-Display-Light.ttf");
+}
+@font-face {
+  font-family: "sf-pro-medium";
+  src: url("../public/font/SF-Pro-Display-Medium.ttf");
+}
+@font-face {
+  font-family: "sf-pro-bold";
+  src: url("../public/font/SF-Pro-Display-Bold.ttf");
+}
+@font-face {
+  font-family: "sf-pro-regular";
+  src: url("../public/font/FontsFree-Net-SFProDisplay-Regular.ttf");
+}
+@font-face {
+  font-family: "interSemiBold";
+  src: url("../public/font/Inter-SemiBold.ttf");
+}
+@font-face {
+  font-family: "ubuntu-light";
+  src: url("../public/font/Ubuntu-Light.ttf");
+}
+@font-face {
+  font-family: "ubuntu-bold";
+  src: url("../public/font/Ubuntu-Bold.ttf");
+}
+
+@font-face {
+  font-family: "sfpro-bold";
+  src: url("../public/font/sfprodisplaybold.OTF");
+}
+@font-face {
+  font-family: "sfpro-regular-display";
+  src: url("../public/font/SFProDisplay-Regular.ttf");
+}
+@font-face {
+  font-family: "sfpro-semiBold";
+  src: url("../public/font/FontsFree-Net-SFProDisplay-Semibold.ttf");
+}
+
+@font-face {
+  font-family: "sfpro-Regular";
+  src: url("../public/font//FontsFree-Net-SFProDisplay-Regular.ttf");
+}
+
+@font-face {
+  font-family: "sfpro-Display-medium";
+  src: url("../public/font/FontsFree-Net-SFProDisplay-Light.ttf");
+}
+
+@font-face {
+  font-family: "sfpro";
+  src: url("../public/font/SF\ pro.OTF");
+}
+@font-face {
+  font-family: "sfpro-medium";
+  src: url("../public/font/sfprodisplaymedium.OTF");
+}
+@font-face {
+  font-family: "sfpro-thin";
+  src: url('../public/font/SF-Pro-Text-Thin.ttf');
+}
+@font-face {
+  font-family: "sfpro-bold";
+  src: url('../public/font/SF-Pro-Display-Bold.ttf');
+}
+@font-face {
+  font-family: "sfpro-medium";
+  src: url('../public/font/SF-Pro-Display-Medium.ttf');
+}
+@font-face {
+  font-family: "sfpro-regular";
+  src: url('../public//font/SF-Pro-Display-Regular.ttf');
+}
+@font-face {
+  font-family: "sf-semibold";
+  src: url('../public/font/SF-Semibold.ttf');
+}
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url('../public/font/SpaceGrotesk.ttf');
+}
+@font-face {
+  font-family: "SpaceGrotesk-bold";
+  src: url('../public/font/SpaceGrotesk-Bold.ttf');
+}
+.scrollBar::-webkit-scrollbar {
+  display: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+/* input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url(../public/images/calendarl.png) no-repeat;
+  width: 15px;
+  height: 15px;
+  border-width: thin;
+} */
+
+.scrollBar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.textarea[contenteditable]:empty::before {
+  content: "Placeholder still possible";
+  color: gray;
+}
+img {
+  object-fit: contain;
+}
+
+
+.scrollPdf::-webkit-scrollbar {
+  width: 6px;
+  border-radius:100px;
+}
+
+/* Track */
+.scrollPdf::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.scrollPdf::-webkit-scrollbar-thumb {
+  background: #7B88AE; 
+  border-radius: 20px;
+}
+
+
+.swotContentscroll::-webkit-scrollbar {
+  width: 6px;
+  border-radius:100px;
+}
+/* Track */
+.swotContentscroll::-webkit-scrollbar-track {
+  background: #F1F1F1;
+}
+/* Handle */
+.swotContentscroll::-webkit-scrollbar-thumb {
+  background: #aea9a9;
+  border-radius: 20px;
+}
+
+
+.kanbanContentscroll::-webkit-scrollbar {
+  width: 6px;
+  height: 8px;
+  border-radius:100px;
+}
+/* Track */
+.kanbanContentscroll::-webkit-scrollbar-track {
+  width: 1px;
+  background: #F4F5FA;
+  border-radius:100px;
+}
+/* Handle */
+.kanbanContentscroll::-webkit-scrollbar-thumb {
+  width: 2px;
+  height: 2px;
+  background: #CACACA;
+  border-radius: 10px;
+}
+
+.datePickerIcon::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  /* cursor: pointer; */
+  height: auto;
+  left: 0;
+  position:absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+  outline: none;
+}
+.datePickerIcon::-webkit-inner-spin-button,
+.datePickerIcon::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.datePickercalendarIcon{
+  height: auto;
+  left: 0;
+  position:relative;
+  right: 0;
+  top: 0;
+  width: auto;
+  outline: none;
+  font-size: 12px;
+  margin-left: 10px;
+  font-family: 'sfpro-medium';
+}
+
+.datePickercalendarIcon::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  height: auto;
+  left: 0;
+  position:absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+  outline: none;
+}
+#journal-scroll::-webkit-scrollbar {
+  width: 4px;
+  cursor: pointer;
+  /*background-color: rgba(229, 231, 235, var(--bg-opacity));*/
+
+}
+#journal-scroll::-webkit-scrollbar-track {
+  background-color: rgba(229, 231, 235, var(--bg-opacity));
+  cursor: pointer;
+  /*background: red;*/
+}
+#journal-scroll::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background-color: #a0aec0;
+  /*outline: 1px solid slategrey;*/
+}

@@ -1,0 +1,56 @@
+.datePickerselect{
+    /* background: transparent;
+    bottom: 0;
+    color: transparent; */
+    /* cursor: pointer; */
+    height: auto;
+    left: 0;
+    position:relative;
+    right: 0;
+    top: 0;
+    width: auto;
+    outline: none;
+    font-size: 12px;
+    background-color: #f9f9f9;
+}
+
+.datePickerselect::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    /* cursor: pointer; */
+    height: auto;
+    left: 0;
+    position:absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    outline: none;
+}
+
+
+.datePickercalendar{
+    height: auto;
+    left: 0;
+    position:relative;
+    right: 0;
+    top: 0;
+    width: auto;
+    outline: none;
+    font-size: 12px;
+    margin-left: 10px;
+    font-family: 'sfpro-medium';
+}
+
+.datePickercalendar::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    height: auto;
+    left: 0;
+    position:absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    outline: none;
+}
