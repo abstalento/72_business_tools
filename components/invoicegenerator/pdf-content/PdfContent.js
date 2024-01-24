@@ -156,9 +156,9 @@ const PdfContent = (props) => {
 
           <View style={styles.pdfRow2}>
             <View style={styles.pdfRow2Left}>
-              <View style={styles.billFrm}>
-                <Text style={styles.textLabel}>
-                  {/* {location.detailsLabel.labelBillFrom} */}
+              <View style={styles.billFrm}>   
+                <Text style={styles.labelBillTo}>           {/* Style is Changed from labelBillFrom */}
+                  {location.detailsLabel.labelBillFrom}     {/* Uncommented Line */}
                 </Text>
                 <Text style={{ ...styles.textInput, ...styles.textInputBold }}>
                   {location.itemDetails.billFrom.split("\n")[0]}

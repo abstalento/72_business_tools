@@ -284,7 +284,7 @@ function SideBar(props) {
                   detailsCallback.billTo === ""
                 )
               }
-              className={`w-[51%] text-[#FFFFFF] text-[12px] break-all font-[sfpro-Regular] h-[35px] ${
+              className={`w-[51%] text-[#FFFFFF] text-[12px] break-normal font-[sfpro-Regular] h-[35px] ${
                 detailsCallback.billFrom === "" || detailsCallback.billTo === ""
                   ? "cursor-not-allowed"
                   : "cursor-pointer"
@@ -310,7 +310,7 @@ function SideBar(props) {
                 style={{ color: bgColor }}
                 onClick={props.onClick}
                 disabled={detailsCallback.billFrom === ""}
-                className={`w-[73%] font-semibold break-all text-[${bgColor}] ${
+                className={`w-[73%] font-semibold break-normal text[12px] text-[${bgColor}] ${
                   detailsCallback.billFrom === "" ||
                   detailsCallback.billTo === ""
                     ? "cursor-not-allowed"
