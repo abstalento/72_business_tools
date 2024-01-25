@@ -14,7 +14,7 @@ const PayslipHeader = ({ colourChangingHeader }) => {
 
     return (
         <div className="bg-[#FA754E] relative h-[69vh] sm:h-[90vh] lg:h-[82vh] md:h-[68vh] w-full" style={{ backgroundColor: colourChangingHeader }}>
-            <div className="bg-[#ffffff] md:pl-[85px] sm:pl-[85%] pt-1 lg:h-[7vh] h-[8vh] w-full">
+            <div className="bg-[#ffffff] md:pl-[85px] sm:pl-[85%] lg:pt-[1.5px] lg:h-[7vh] h-[8vh] w-full">
                 <BtoolsHeader Src="/images/payslipImg.png" Height="35" Width="98" />
             </div>
             <div className="h-[51%] sm:h-[50vh] md:h-[43vh] w-full flex flex-row justify-around sm:justify-center md::justify-center items-center sm:items-center  md:items-center">

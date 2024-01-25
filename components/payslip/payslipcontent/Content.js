@@ -432,7 +432,7 @@ const Payslip = (props) => {
         <div className="w-full flex justify-center md:pb-[4rem]">
           <div className="flex w-[80%] sm:flex-row md:flex-row sm:w-[80%] md:w-[80%] sm:h-[30vh] md:h-[30vh] items-start justify-between">
             <div className="sm:w-[55%] md:w-[55%] w-[60%] flex flex-row items-center">
-              <div className="md:w-[40%] md:h-[220px] w-[73%] h-[131px] sm:w-[73%] sm:h-[131px]  text-[12px] rounded-[1.5rem] flex flex-col border-[2px] border-dashed justify-center border-black hover:cursor-pointer">
+              <div className="md:w-[40%] md:h-[220px] w-[73%] h-[131px] sm:w-[73%] sm:h-[131px]  text-[12px] rounded-[1.5rem] flex flex-col  border-[2px] border-dashed justify-center border-black hover:cursor-pointer">
                 {image.ImageUploaded ? (
                   <section className="w-[100%] md:h-[225px] h-[131px] relative">
                     <section>
@@ -725,7 +725,7 @@ const Payslip = (props) => {
           </div>
         </div>
         {/* company details prnt div */}
-        <div className="w-full min-h-[35vh md:max-h-[38vh] sm:max-h-[60vh] lg:mt-[20px] lg:pb-[260px] md:mt-[20px] md:pb-[260px] max-h-[60vh] border-dashed border-b-2 flex justify-center ">
+        <div className="w-full min-h-[35vh md:max-h-[38vh] sm:max-h-[60vh] lg:mt-[20px] lg:pb-[260px] md:mt-[20px] md:pb-[260px] max-h-[60vh] xs:border-none border-dashed border-b-2 flex justify-center ">
           {/* company details input prnt div */}
           <div className="flex flex-row w-[80%] mt-[50px] justify-between">
             <div className=" flex sm:flex-col md:flex-row flex-col justify-between w-full sm:w-full">
@@ -816,16 +816,16 @@ const Payslip = (props) => {
         </div>
         {/* company details end div */}
         {/* employe details parent overall div */}
-        <div className="w-full h-50vh border-dashed lg:pt-12px sm:pt-100px border-b-2 flex justify-center flex-col items-center">
+        <div className="w-full h-50vh border-dashed lg:pt-12px sm:pt-100px border-b-2 xs:pt-[5rem] flex justify-center flex-col items-center">
           {/* employe details heading div */}
           <div className=" flex justify-start items-center sm:text-[25px] md:text-[25px] text-[20px]  font-[sfpro-bold] w-[80%] ">
             <h1 className="flex flex-row sm:h-[10vh] md:h-[10vh] h-[8vh] justify-around items-center">
               {" "}
-              Employee Pay Summary<p className="text-[#FF0303]">*</p>
+              Employee Pay Summary<p className="text-[#FF0303] xs:text-xs">*</p>
             </h1>
           </div>
           {/* employe details input prnt div */}
-          <div className="bg-[#ffffff] flex-wrap rounded-[5px] pt-[30px] h-auto flex justify-center mb-10 w-[80%] md:w-[90%]">
+          <div className="bg-[#ffffff] flex-wrap rounded-[5px] pt-[30px] h-auto flex justify-center mb-10 w-[80%] md:w-[90%] xs:w-[90%]">
             {/* employe details input fields */}
             <div className=" flex sm:flex-wrap md:flex-wrap  md:flex-row sm:flex-col flex-col justify-between w-[95%] h-auto items-center">
               {/* inputs cato  heading  */}
@@ -1182,17 +1182,17 @@ const Payslip = (props) => {
         <div className=" w-full md:w-full  flex justify-center flex-col items-center ">
           {/* details heading div */}
           <div className="  flex justify-between items-center  sm:text-[25px] md:text-[25px] text-[20px] font-[sfpro-bold] w-[80%] h-[10vh]">
-            <h1 className="flex flex-row sm:w-[50%] md:w-[29%] w-[85%]">
-              Income Details<p className="text-[#FF0303]">*</p>
-            </h1>
+            <h3 className="flex flex-row sm:w-[50%] md:w-[29%] w-[85%]">
+              Income Details<p className="text-[#FF0303] xs:text-xs">*</p>
+            </h3>
             <div className="text-[20px] flex justify-around font-[sfpro-medium] items-center">
-              <h1
+              <h6
                 onClick={currencyClick}
-                className="sm:text-[17px] md:text-[17px] text-[13px] rounded-[5px] p-[5px]"
+                className="sm:text-[17px] md:text-[17px] text-[13px] rounded-[5px] p-[5px] xs:text-xs"
               >
                 {" "}
                 Choose currency:
-              </h1>
+              </h6>
               <div>
                 <select
                   id="currencyPopUp"
@@ -1209,7 +1209,7 @@ const Payslip = (props) => {
             </div>
           </div>
           {/* details input parent div */}
-          <div className="flex justify-center pt-[10px] mb-[45px] sm:mb-[45px] md:mb-0 md:pb-[40px] bg-[#ffffff] h-auto rounded-[5px]  w-[80%] md:w-[90%] ">
+          <div className="flex justify-center pt-[10px] mb-[45px] sm:mb-[45px] md:mb-0 md:pb-[40px] bg-[#ffffff] xs:w-[90%] h-auto rounded-[5px]  w-[80%] md:w-[90%] ">
             {/* input container */}
             <div className=" flex sm:flex-col md:flex-row flex-col justify-between w-[95%] h-auto items-center">
               {/* inputs cato  heading  */}
