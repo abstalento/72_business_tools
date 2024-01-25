@@ -62,10 +62,11 @@ export default function SalaryCalculator() {
           Width="110"
         />
         <div>
-              <input
+              {/* <input
                 className="w-[35%] font-[sf-pro-medium] pl-2 text-[12px] bg-transparent"
                 value="Currency:"
-              />
+              /> */}
+              <span className="w-[35%] font-[sf-pro-medium] px-2 text-[12px] bg-transparent">Currency:</span>
               <select
                 id="currencyPopUp"
                 className={
@@ -96,6 +97,7 @@ export default function SalaryCalculator() {
           Src="/images/GST One Pro.png"
           Path="/"
           appName="InvoiceGenerator"
+          className="bg-green"
         />
         <BtoolsFooter />
       </div>
