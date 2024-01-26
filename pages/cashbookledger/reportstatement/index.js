@@ -247,7 +247,7 @@ const reportstatement = () => {
           <div className="flex w-[7%]">
             <img
               src="../icons/ledgerexport.svg"
-              className="w-8 h-8 cursor-pointer"
+              className="pt-1 w-9 h-9 cursor-pointer"
               onClick={(e) => handleLedger(e)}
             />
           </div>
@@ -352,7 +352,7 @@ const reportstatement = () => {
         <div className="bg-[#F6F6F6] border-t-2 border-[#707070]/5  p-6 flex">
           <div className="w-[80%] h-32 bg-[#fbfbfb] border-r-2">
             <div className="flex justify-start  bg-[#232E380D] w-full h-[40px]">
-              <p className=" p-3">Report</p>
+              <p className="p-3">Report</p>
             </div>
 
             <div className="flex flex-row justify-around h-[60px] mt-3">
@@ -364,6 +364,7 @@ const reportstatement = () => {
                   value={fromDate}
                   onChange={onFromdateChange}
                 />
+                
               </div>
               <div className="border border-[#707070] bg-white border-opacity-25 rounded-lg p-1 flex flex-col">
                 <label className="text-xs">To Date</label>

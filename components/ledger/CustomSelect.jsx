@@ -124,7 +124,7 @@ else{
       <div style={{width:props.Width, height:props.Height}} className="border sm:bg-white bg-white  border-opacity-25 rounded-lg p-[2px]">
         <label className="text-xs hidden sm:hidden md:block mt-[2px]">{props.title}</label>
         <Select
-        className="text-[15px] sm:text-[15px] md:text-[13px]"
+        className="text-[15px] sm:text-[16px] md:text-[12px] "
           placeholder="Select the Ledger"
         styles={{
           control: (baseStyles, state) => ({
