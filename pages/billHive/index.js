@@ -2410,7 +2410,7 @@ const HomePage = () => {
                           viewBox="0 0 32 32"
                           id="delete"
                           onClick={() => deleteItem(index)}
-                          className="hidden group-hover:block h-[13px] cursor-pointer text-[#989EA4] hover:text-[#009e74]"
+                          className="hidden group-hover:block h-[20px] cursor-pointer text-[#989EA4] hover:text-[#009e74]"
                           xmlns="http://www.w3.org/2000/svg"
                           data-name="Layer 3"
                         >
