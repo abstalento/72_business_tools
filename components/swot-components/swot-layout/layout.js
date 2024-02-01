@@ -103,14 +103,18 @@ const DefaultLayout = ({
       <div
         className={`flex text-white font-[sfpro-medium] min-w-[95%] p-[8px] justify-between items-center rounded-md ${styles}`}
       >
-        <div className="flex items-center space-x-2 w-[50%] md:w-[32%]">
-          <div className="flex justify-between">
-            <MyImage src={imageSrc} height="15" width="15" alt="Logo" />
-            <h1 className="ml-2">{title}</h1>
-          </div>
-          <button className="h-[17px] " onClick={() => handleField(title)}>
-            <MyImage src="/icons/Add.svg" height="18" width="20" alt="Logo" />
-          </button>
+        <div className="flex items-center space-x-2">
+        <div className="flex justify-between items-center">
+        <div style={{ flexShrink: 0 }}>
+          <MyImage src={imageSrc} height="15" width="15" alt="Logo" style={{ maxWidth: '100%', height: 'auto', display: 'block' }}
+          />
+        </div>
+        <h1 className="ml-2">{title}</h1>
+      </div>
+
+          <button className="h-[17px] w-full md:w-1/3" onClick={() => handleField(title)}>
+            <MyImage src="/icons/Add.svg" height="18" width="20" alt="Logo" style={{maxWidth:'100%'}} />
+          </button> 
         </div>
         <div className="flex font-[sfpro-medium] justify-between text-xs bg-black/10 p-1 px-2 w-24 rounded-md">
           <div>
@@ -130,7 +134,6 @@ const DefaultLayout = ({
         {storeData?.map((elem, ind) => {
           return (
             <div
-             
               key={ind}
               className="flex justify-between mb-2 font-[sfpro-medium]"
             >
@@ -152,7 +155,7 @@ const DefaultLayout = ({
                     id={`${title}Numbers`}
                     value={
                       (storeData[ind].points =
-                        storeData[ind].points > 10 ? "" : storeData[ind].points)
+                        storeData[ind].points > 10  ? "0" : storeData[ind].points < 0 ? "0" : storeData[ind].points)
                     }
                     className="w-8 h-[39px] outline-none text-center rounded-md bg-[#F5F5F5]"
                     onChange={(e) => handleData(e, ind)}

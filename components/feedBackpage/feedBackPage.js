@@ -45,7 +45,7 @@ const FeedBackPage = () => {
                         <div className="pt-6 flex justify-around ">
                             <div className="w-[85%] flex flex-row justify-between">
                             <div className="flex flex-col items-center w-[6%]">
-                                <input id="radio-0" name="feedback" type="radio" value="0" className="w-[77%] accent-[#6038B2] h-[17px]"></input>
+                                <input id="radio-0" name="feedback" type="radio"  className="w-[77%] accent-[#6038B2] h-[17px]"></input>
                                 <label for="radio-0" class="text-[12px] font-[sfpro-medium] ">0</label>
                                 </div>
                                 <div className="flex flex-col items-center w-[6%]">
