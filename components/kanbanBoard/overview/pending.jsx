@@ -66,15 +66,13 @@ const PenProjects = ({ getSearchChange, search, SearchValueDataValue, closeSideb
   }
 
   const FilterData = (proname) => {
-
     setSelectedCardId(proname)
     projectUuid(proname)
   }
-
  
 useEffect(()=>{
   setSelectedCardId()
-},[countNumber==0])
+  },[countNumber==0])
 
   let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   let now = new Date();
@@ -103,10 +101,7 @@ useEffect(()=>{
        setEditCard(pendStatusHistory)
        setId(data)
        setCardIndex(index)
-       setSowModel(true)
-
-     
-     
+       setSowModel(true) 
   } 
 
   const setEditCardCompleted=(data)=>{
@@ -284,10 +279,6 @@ useEffect(()=>{
 
               SetPendingCard(pendingProjects);
               setCompleted(completedProjects);
-
-
-
-
               sendCount(pendingProjects?.length)
               sendComCount(completedProjects?.length)
             });
@@ -353,14 +344,6 @@ useEffect(()=>{
         alert(JSON.stringify(err))
       }
     })()
-
-
-
-
-
-
-
-
 
   }, [useEffectState, selectDate, ,search])
 
@@ -445,7 +428,7 @@ useEffect(()=>{
                                 return (
                                   <div key={index}
                                   id="div1"
-                                    class="md:w-[420px] w-[350px] group cursor-pointer flex justify-around items-center text-justify h-[27vh] md:h-64 overflow-hidden rounded-2xl  bg-white  "
+                                    class="md:w-[420px] w-[350px] group cursor-pointer flex justify-around items-center text-justify h-[27vh] md:h-[20rem] lg:h-64 overflow-hidden rounded-2xl  bg-white  "
                                     onClick={() => { setSelectedCardValue(data.projectName), FilterData(data.id) }}
                                   >
 
@@ -464,12 +447,13 @@ useEffect(()=>{
                                       <div className="flex flex-row justify-between items-center w-full">
                                         <div className="flex items-center ">
                                           <img src="../icons/Calendar.svg" alt="" />
-                                          <p className="font-[sfpro-medium] opacity-[0.4] text-[14px] md:text-[16px]">{data.day}</p>
+                                          {/* <p className="font-[sfpro-medium] opacity-[0.4] text-[14px] md:text-[16px]">{data.day}</p> */}
+                                          <p className="updateTime font-[sfpro-medium] opacity-[0.4] text-[14px] md:text-[16px]">{data.day}</p>
                                         </div>
-                                        <div id="div2" className="flex items-center md:invisible  w-[13%] justify-between md:group-hover:visible" >
-                                          <img src="/images/write.png"  
+                                        <div id="div2" className="flex items-center md:invisible w-[13%] justify-between md:group-hover:visible" >
+                                          <img src="/images/write.png" 
                                             className="cursor-pointer opacity-[0.8]"
-                                           height={10}
+                                            height={10}
                                             width={15}  alt=""
                                             onClick={(e) => editCard(e,data,index)}
                                             />
@@ -515,7 +499,6 @@ useEffect(()=>{
             </>
         }
       </div>
-
     </>
   )
 }

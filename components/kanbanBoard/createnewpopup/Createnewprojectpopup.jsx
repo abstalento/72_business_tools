@@ -1,5 +1,3 @@
-
-
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "..//..//..//styles/kanbanBoard.module.css"
@@ -211,7 +209,8 @@ function Createnewprojectpopup(props) {
 
 
     const handleSubmit = () => {
-
+        let date=new Date();
+        task.day=date;
         setTaskHistory([...taskHistory, task])
         let taskArray = []
         task.taskList = columnsFromBackend
@@ -233,8 +232,6 @@ function Createnewprojectpopup(props) {
                     console.log(err);
                 });
             } else {
-
-
                 db.put({
                     _id: 'kanbanBoardNewProjectHistory',
                     data: taskArray
@@ -244,6 +241,7 @@ function Createnewprojectpopup(props) {
                     console.log(err);
                 });
             }
+
         })
 
         setCallUseEffect(!callUseEffect)
@@ -319,10 +317,10 @@ function Createnewprojectpopup(props) {
                                         <label className="md:w-[50%] text-[10px] md:text-[12px] font-[sfpro-bold] flex"> Priority</label>
                                     </div>
                                     <div >
-                                        <select className={`rounded outline-none ${task.priority == "Low" ? 'bg-[#FFC107] w-[80%] md:w-[100%] text-white' : task.priority == "High" ? 'bg-[#EF5350] w-[80%] md:w-[100%] text-white' : task.priority == "Medium" ? 'bg-[#66BB6A] w-[80%] md:w-[100%] text-white' : 'bg-[#FFC107] w-[80%] md:w-[100%] text-white'} md:h-[22px] md:w-[75px] p-1 font-[sfpro] text-[10px] md:text-[12px] `} name="priority" onChange={handleChangeColor}>
-                                            <option className="bg-white text-black" value="Low">Low</option>
-                                            <option className="bg-white text-black" value="Medium">Medium</option>
-                                            <option className="bg-white text-black" value="High">High</option>
+                                        <select className={`rounded outline-none ${task.priority == "Low" ? 'bg-[#FFC107] w-[80%] md:w-[100%]' : task.priority == "High" ? 'bg-[#EF5350] w-[80%] md:w-[100%]' : task.priority == "Medium" ? 'bg-[#66BB6A] w-[80%] md:w-[100%]' : 'bg-[#FFC107] w-[80%] md:w-[100%]'} md:h-[22px] md:w-[75px] p-1 font-[sfpro] text-[10px] md:text-[12px] `} name="priority" value={task.priority} onChange={handleChangeColor}>
+                                            <option className={`bg-white text-black`}value="Low">Low</option>
+                                            <option className={`bg-white text-black`}value="Medium">Medium</option>
+                                            <option className={`bg-white text-black`}value="High">High</option>
                                         </select>
                                     </div>
                                 </div>
