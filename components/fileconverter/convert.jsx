@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Addfile from "../fileconvert/Addfile";
 import Input from "../fileconvert/Input";
 import Output from "../fileconvert/Output";
@@ -10,6 +10,7 @@ import ProgressBar from "../progressbar/progressBar";
 import React from "react";
 import ReloadImage from "../../public/icons/reload.svg";
 import downloadLite from "../../public/icons/DownloadLite.svg";
+//import Closefile from "../../public/icons/Close-button.svg";
 
 import * as Helpers from "../../utils/imageconverter/helpers";
 import { green } from "@material-ui/core/colors";
@@ -21,8 +22,12 @@ export default function Convert(props) {
   const [uploadedImageData, setUploadedImagesData] = useState([]);
   const [pdfUrl, setPdfUrl] = useState("");
   const [progressPercentage, setProgressPercentage] = useState(0);
+  const [divId,setDivId]=useState("")
+
+  const [fileChosen, setFileChosen] = useState(false);
+
   const handleAdd = () => {
-    setAddfile([...addfile, `btn${addfile.length}`]);
+    setAddfile([...addfile,` btn${addfile.length}`]);
     setCallUseEffect(false);
     setProgressPercentage(0);
   };
@@ -46,6 +51,7 @@ export default function Convert(props) {
 
   const uploadedImage = (e) => {
     setUploadedImagesData(e);
+    setFileChosen(true);
   };
 
   const downloadPDF = () => {
@@ -62,6 +68,17 @@ export default function Convert(props) {
     setCallUseEffect([]);
     setProgressPercentage(0);
   };
+
+  // const uploadedImage = (e) => {
+  //   setUploadedImagesData(e);
+  //   setFileChosen(true); // Set fileChosen to true when a file is chosen
+  // };
+
+  // const closeFile = () => {
+  //   setUploadedImagesData([]);
+  //   setFileChosen(false); // Set fileChosen to false when closing the file
+  //   // Add any other necessary cleanup logic
+  // };
 
   const handleProgressBar = () => {
     var elem = document.getElementById("progressBar");
@@ -82,6 +99,26 @@ export default function Convert(props) {
       }
     }
   };
+  const deleteHandler=(val)=>{
+    console.log(val)
+    if(divId!="")
+    {
+      const fileDivToRemove = document.getElementById(divId);
+      if (fileDivToRemove) {
+        // Remove nested elements if needed
+        while (fileDivToRemove && fileDivToRemove.innerHTML.trim() === "" && fileDivToRemove.firstChild) {
+          fileDivToRemove.removeChild(fileDivToRemove.firstChild);
+        }
+  
+        fileDivToRemove.remove();
+      }
+    }
+    setDivId(val)
+  }
+useEffect(()=>{
+  deleteHandler(divId);
+},[divId])
+
 
   return (
     <div className="flex justify-center flex-col items-center">
@@ -102,16 +139,20 @@ export default function Convert(props) {
               className="flex flex-col scrollPdf overflow-x-hidden overflow-auto overflow-y-auto 
             "
             >
+              <p className="font-[sfpro-regular-display] text-white/60 mb-4 text-xs">
+                File size should not exceeds 25MB.
+              </p>
               {addfile.map((index) => {
                 return (
-                  <div className="h-10 pb-1 mb-5 z-10">
+
+                  <div key={index} className="h-10 pb-1 mb-5 z-10 " id={divId!="" ? divId : ""}>
                     {/* mb-10 z-10 */}
                     {/* <Input /> */}
                     <ImageToPdf
                       uploadedImageFile={uploadedImage}
                       emptyUrl={uploadedImageData}
                       useEffectState={callUseEffect}
-                      id={index}
+                      idHandler={deleteHandler}
                     />
                   </div>
                 );
@@ -120,6 +161,18 @@ export default function Convert(props) {
                 <Addfile handleAdd={handleAdd} />
               ) : null}
             </div>
+
+            {/* {fileChosen && (
+          <div
+            onClick={closeFile}
+            className="relative top-3 bg-white w-5 h-5 bg-opacity-10 flex item-center justify-center float-right cursor-pointer"
+          >
+            <Image src={Closefile} width={20} height={20} />
+          </div>
+        )} */}
+
+
+
             {/* <div className="xl:mt-2 relative top-[90px] rotate-90 md:rotate-0 ">
               <Image src={arrow} width="30px" alt="arrow" />
             </div> */}

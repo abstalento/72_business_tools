@@ -15,10 +15,9 @@ export const imageDimensionsOnA4 = (dimensions) => {
   if (isLandscapeImage) {
     return {
       width: A4_PAPER_DIMENSIONS.width,
-      height:
-        A4_PAPER_DIMENSIONS.width / (dimensions.width / dimensions.height),
+      height: A4_PAPER_DIMENSIONS.width * (dimensions.height / dimensions.width),
     };
-  }
+  }  
 
   const imageRatio = dimensions.width / dimensions.height;
   if (imageRatio > A4_PAPER_RATIO) {
@@ -34,8 +33,8 @@ export const imageDimensionsOnA4 = (dimensions) => {
   }
 
   return {
-    width: A4_PAPER_DIMENSIONS.height / (dimensions.height / dimensions.width),
-    height: A4_PAPER_DIMENSIONS.height,
+    width: A4_PAPER_DIMENSIONS.width * (dimensions.width / dimensions.height),
+    height: A4_PAPER_DIMENSIONS.width,
   };
 };
 
@@ -65,6 +64,8 @@ export const fileToImageURL = (file) => {
 };
 
 export const generatePdfFromImages = (images) => {
+  console.log(images)
+  console.log('A4_PAPER_DIMENSIONS:', A4_PAPER_DIMENSIONS);
   const doc = new jsPDF();
   doc.deletePage(1);
 
@@ -74,7 +75,10 @@ export const generatePdfFromImages = (images) => {
       width: image.width,
       height: image.height,
     });
-
+    
+    console.log('Image dimensions:', image.width, image.height);
+    console.log('Image type:', image.type);
+    console.log('Calculated dimensions:', imageDimensions);
     doc.addPage();
     doc.addImage(
       image.src,
