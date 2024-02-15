@@ -120,7 +120,7 @@ function Createnewprojectpopup(props) {
                     description:card.description,
                     periodOfTask: card.periodOfTask,
                     color: '#FFC107',
-                    day:card.day,
+                    day:`${thisMonth} ${todayDate}th last Update at ${hour}.${minutes} ${ampm}`,
                     taskList:card.taskList
                  })
             }
@@ -135,7 +135,7 @@ function Createnewprojectpopup(props) {
                 description: '',
                 periodOfTask: '',
                 color: '#FFC107',
-                day: `${thisMonth} ${todayDate}th last Update at ${hour}.${minutes} ${ampm}`
+                day: `${thisMonth} ${todayDate}th last Update aaat ${hour}.${minutes} ${ampm}`
             })
         }
          
@@ -209,8 +209,6 @@ function Createnewprojectpopup(props) {
 
 
     const handleSubmit = () => {
-        let date=new Date();
-        task.day=date;
         setTaskHistory([...taskHistory, task])
         let taskArray = []
         task.taskList = columnsFromBackend

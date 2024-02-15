@@ -447,8 +447,7 @@ useEffect(()=>{
                                       <div className="flex flex-row justify-between items-center w-full">
                                         <div className="flex items-center ">
                                           <img src="../icons/Calendar.svg" alt="" />
-                                          {/* <p className="font-[sfpro-medium] opacity-[0.4] text-[14px] md:text-[16px]">{data.day}</p> */}
-                                          <p className="updateTime font-[sfpro-medium] opacity-[0.4] text-[14px] md:text-[16px]">{data.day}</p>
+                                          <p className="font-[sfpro-medium] opacity-[0.4] text-[14px] md:text-[16px]">{data.day}</p>
                                         </div>
                                         <div id="div2" className="flex items-center md:invisible w-[13%] justify-between md:group-hover:visible" >
                                           <img src="/images/write.png" 
@@ -469,31 +468,22 @@ useEffect(()=>{
                                         </div>
                                       </div>
                                     </div >
-                                  </div>
-
+                                  </div>  
                                 )
-
                               })}
-
                             </div>
-
                           </div>
                         </div>
                       </div>
-
-
                     </div> : <div className="w-[100%] h-[50vh] flex justify-center items-center">
                       <div className=" w-[40%] flex items-center justify-center h-[20vh]">
                         <h3>No results found</h3>
-
                       </div>
-
                     </div>
                   }
-
                 </>
               }
-              <div className="">
+              <div>
                 <ComProjects setEditCard={setEditCardCompleted} ComCountStatus={ComCountStatus} GetDataComplete={statusHistory} search={search} setSelectedCard={projectUuid} dbData={dbData} callUseEffectCall={callUseEffectCall} />
               </div>
             </>

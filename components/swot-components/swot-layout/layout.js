@@ -152,7 +152,7 @@ const DefaultLayout = ({
                     id={`${title}Numbers`}
                     value={
                       (storeData[ind].points =
-                        storeData[ind].points > 10 ? "0" : storeData[ind].points < 0 ? "0" : storeData[ind].points)
+                        storeData[ind].points > 10 ? "" : storeData[ind].points)
                     }
                     className="w-8 h-[39px] outline-none text-center rounded-md bg-[#F5F5F5]"
                     onChange={(e) => handleData(e, ind)}

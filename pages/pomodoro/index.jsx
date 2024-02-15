@@ -62,7 +62,7 @@ const sendCallSettingPage=(data)=>{
       <div className={moduleStyle.noScrollbar}>
         {/* <BGImage/> */}
         <div
-          className={`absolute ${isDarkMode && isTimerRun ? "bg-[#000]" : "bg-[#AB47BC]"} ${bgColor=="Short break" ? "bg-[#33718a]" : bgColor=="Long break" ? "bg-[#124970]" : "bg-[#AB47BC]" }  bg-opacity-90 h-[100vh]`}
+          className={`absolute ${isDarkMode && isTimerRun ? "bg-  black" : "bg-[#AB47BC]"} ${bgColor=="Short break" ? "bg-[#33718a]" : bgColor=="Long break" ? "bg-[#124970]" : "bg-[#AB47BC]" }  bg-opacity-90 h-[100vh]`}
         >
           <img src="../images/bg.png" width={"100%"} height={"100vh"} />
         </div>
