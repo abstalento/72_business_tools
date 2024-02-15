@@ -354,6 +354,10 @@ const HomePage = () => {
         };
         db.put(doc);
       }
+
+
+
+      
       db.put(
         {
           _id: doc._id,
@@ -366,6 +370,7 @@ const HomePage = () => {
           } else {
             console.log(response, "ress");
           }
+
         }
       );
     });
