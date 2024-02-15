@@ -284,7 +284,7 @@ useEffect(()=>{
             });
           } else {
 
-            let pendingProjects = [];
+            let  pendingProjects = [];
             let completedProjects = [];
 
             kanbanBoardNewProjectHistory.data.map((value) => {
@@ -483,7 +483,7 @@ useEffect(()=>{
                   }
                 </>
               }
-              <div>
+              <div className="">
                 <ComProjects setEditCard={setEditCardCompleted} ComCountStatus={ComCountStatus} GetDataComplete={statusHistory} search={search} setSelectedCard={projectUuid} dbData={dbData} callUseEffectCall={callUseEffectCall} />
               </div>
             </>

@@ -135,7 +135,7 @@ function Createnewprojectpopup(props) {
                 description: '',
                 periodOfTask: '',
                 color: '#FFC107',
-                day: `${thisMonth} ${todayDate}th last Update aaat ${hour}.${minutes} ${ampm}`
+                day: `${thisMonth} ${todayDate}th last Update at ${hour}.${minutes} ${ampm}`
             })
         }
          
