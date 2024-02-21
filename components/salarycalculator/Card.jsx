@@ -525,7 +525,7 @@ export default withRouter( class Card extends Component {
                     results
                   </div>
                   <div>
-                    <p className="font-['sf-pro-bold'] text-lg text-[#272D35]">
+                    <p className="font-['sf-pro-bold'] text-lg text-[#272D35] mt-7">
                       Our Other Products:
                     </p>
                     <div className="w-[90%] h-24 flex justify-around items-center">
@@ -540,14 +540,14 @@ export default withRouter( class Card extends Component {
                         src="/images/btBillHive.png"
                         height="55"
                         width="110"
-                        className="cursor-pointer"
+                        className="cursor-pointer mx-5"
                         onClick={()=>this.appRoute("/billHive")}
                       />
                       <Image
                         src="/images/Promodoro.png"
                         height="55"
                         width="110"
-                        className="cursor-pointer"
+                        className="cursor-pointer mx-5"
                         onClick={()=>this.appRoute("/pomodoro")}
                       />
                     </div>
