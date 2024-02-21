@@ -150,38 +150,73 @@ let year = date.getFullYear();
 let currentDate = `${day}-${month}-${year}`;
 
   // add new task
-  const addEditTask = () => {
+  // const addEditTask = () => {
 
+  //   if (newTaskTemp.pomodoroCount !== 0 && newTaskTemp.taskName !== "") {
+  //     if (isEditClick) {
+  //       const editTask = task.map((obj) => {
+  //         if (obj.taskId === newTaskTemp.taskId) return newTaskTemp;
+  //         else return obj;
+  //       });
+  //       setTask(editTask);
+  //     } else {
+  //       const newTask = {
+  //         ...newTaskTemp,
+  //         taskId: task ? task?.length + 1 : 1,
+  //         act: 0,
+  //         Date:currentDate,
+  //         timeCount:[]
+
+         
+  //       };
+      
+  //       if (task) setTask([...task, newTask]);
+  //       else setTask([newTask]);
+  //     }
+  //     setNewTaskTemp({});
+  //     setIsTaskAdd(true);
+  //     closeDialog();
+  //   } else {
+  //     alert("Bring task name or Increase pomodoro count");
+  //   }
+
+  //   setUseEffectState((preState) => !preState);
+  // };
+
+  const addEditTask = () => {
     if (newTaskTemp.pomodoroCount !== 0 && newTaskTemp.taskName !== "") {
+      const existingTask = task.find((obj) => obj.taskName === newTaskTemp.taskName);
+  
+      if (existingTask && !isEditClick) {
+        alert("Task already exists");
+        return;
+      }
+  
       if (isEditClick) {
-        const editTask = task.map((obj) => {
-          if (obj.taskId === newTaskTemp.taskId) return newTaskTemp;
-          else return obj;
-        });
+        const editTask = task.map((obj) => (obj.taskId === newTaskTemp.taskId ? newTaskTemp : obj));
         setTask(editTask);
       } else {
         const newTask = {
           ...newTaskTemp,
-          taskId: task ? task?.length + 1 : 1,
+          taskId: task ? task.length + 1 : 1,
           act: 0,
-          Date:currentDate,
-          timeCount:[]
-
-         
+          Date: currentDate,
+          timeCount: [],
         };
-      
+  
         if (task) setTask([...task, newTask]);
         else setTask([newTask]);
       }
+  
       setNewTaskTemp({});
       setIsTaskAdd(true);
       closeDialog();
     } else {
       alert("Bring task name or Increase pomodoro count");
     }
-
+  
     setUseEffectState((preState) => !preState);
-  };
+  };
 
   const sendCallUseEffectCall=(data)=>{
 

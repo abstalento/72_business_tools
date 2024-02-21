@@ -335,7 +335,7 @@ const dateData=()=>{
                <div className="flex justify-between bg-[#FFFFFF] border-[#B9B9B9] items-center">
 
                   <BtoolsHeader Src="../icons/KanbanBoardLogo.svg" Height="50" Width="83" />
-                  <div className=" md:flex md:items-center md:justify-around lg:w-[126px] md:w-[10%] hidden">
+                  <div className=" md:flex md:items-center md:justify-around lg:w-[142px] md:w-[10%] hidden">
                      <input type="month" className="w-full cursor-pointer outline-none font-[sfpro-medium] bg-[#F4F5FA] p-1.5 rounded-[7px]" onChange={handleChange} value={selectDate ? selectDate : format} readOnly={dbData == undefined ? true : false} ></input>
                   </div>
                   <div className="hidden md:block">
