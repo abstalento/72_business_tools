@@ -568,7 +568,7 @@ const ScribbleNotes = () => {
     <>
       <div className="grid grid-cols-[50px_auto] scrollBar h-screen bg-[#F9F9F9]">
         <div className="h-[inherit]">
-          <div className="border-r-[1px] absolute w-[50px] h-full bg-white scrollBar overflow-x-hidden z-[1] transition-all duration-[350ms] hover:w-[200px]">
+          <div className="border-r-[1px] absolute w-[50px] h-screen z- bg-white scrollBar overflow-x-hidden z-[1] transition-all duration-[350ms] hover:w-[200px]">
             <div className="border-b-[1px] h-[50px]">
               <div className={SIDEBAR_STATIC_W_H_CLASS}>
                 <BtImage
@@ -635,7 +635,7 @@ const ScribbleNotes = () => {
                 paddingBottom: "2px",
               }}
             />
-            <h1 className="font-[SpaceGrotesk-bold] text-[18px] lg:text-[17px]">Scribble Notes</h1>
+            <h1 className="font-[SpaceGrotesk-bold] text-[15px] lg:text-[17px] sm:text-sm p-2">Scribble Notes</h1>
             <div className="hidden w-[60%]  items-center justify-center h-10 lg:flex md:flex">
               <div className="bg-[#F4F5FA] rounded-[5px] flex items-center h-8 w-[50%]">
                 <Image src="/icons/layer1.svg" alt="" width="30" height="15" />
@@ -759,7 +759,7 @@ const ScribbleNotes = () => {
                           {/* <input type="text" /> */}
                           <button
                             type="button"
-                            className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                            className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white ml-[-2rem] lg:ml-0 md:ml-0 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
                             id="menu-button"
                             aria-expanded="true"
                             aria-haspopup="true"
@@ -790,7 +790,7 @@ const ScribbleNotes = () => {
 
                         {showTranslationDropdown == "Y" ? (
                           <div
-                            className="absolute left-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                            className="absolute left-0 z-10 mt-2 w-56 ml-[-2rem] lg:ml-0 md:ml-0 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                             role="menu"
                             aria-orientation="vertical"
                             aria-labelledby="menu-button"
@@ -817,7 +817,7 @@ const ScribbleNotes = () => {
                         ) : null}
                       </div>
                     ) : (
-                      <Button variant="contained" className="!normal-case !rounded-[0] !mb-[10px]" onClick={toggleTranslateDropdown} 
+                      <Button variant="contained" className="!normal-case !rounded-[0] !mb-[-2px] w-[10rem] lg:!mb-[10px] md:!mb-[10px]  " onClick={toggleTranslateDropdown} 
                       style={{cursor:showArchivedNotes ? "not-allowed":"pointer",pointerEvents:showArchivedNotes ? "none":"auto" }}>
                         Translate this note</Button>
                     )}
@@ -846,14 +846,14 @@ const ScribbleNotes = () => {
                   <div className="mt-auto mb-[15px] w-[98%] flex justify-between" style={{ pointerEvents : showArchivedNotes ? "none" : "auto"}}>
                     <button
                       style={notesObj.color?.hex ? { backgroundColor: notesObj.color.hex } : null}
-                      className="bg-[rgba(0,0,0,0.25)] flex flex-row justify-between items-center font-[sfpro-bold] text-black px-[20px] py-[5px]"
+                      className="bg-[rgba(0,0,0,0.25)] flex flex-row justify-between items-center font-[sfpro-bold] text-black ml-[-2rem] md:ml-0 lg:ml-0 px-[3px] py-[3px] lg:px-[20px] lg:py-[5px] md:px-[20px] md:py-[5px]"
                       onClick={toggleLabelModal}
                     >
                       <Image src="/icons/createplusBlack.svg" className="mr-4" height={12} width={12} />
                       {notesObj.label ? notesObj.label.name : "Add Label"}
                     </button>  
                     <button hidden={showArchivedNotes?true:false } style={{cursor:!notesObj.title? "not-allowed":"pointer"}} onClick={addNotes} disabled={!notesObj.title} 
-                           className={`${!notesObj.title ?"bg-gray-300 text-black" :"bg-[#1565c0] text-white shadow-md"}  rounded-[5px] w-[25%] h-[5vh] lg:w-[18%] `}>Save</button>
+                           className={`${!notesObj.title ?"bg-gray-300 text-black" :"bg-[#1565c0] text-white shadow-md"}  rounded-[5px] mr-[-2rem] w-[5rem] md:w-[25%] h-[5vh] lg:w-[18%] `}>Save</button>
                   </div>
 
                   {/* bg-[#1565c0] */}
@@ -947,11 +947,10 @@ const ScribbleNotes = () => {
               </div>
             ) : null}
           </div>
-          <div className="relative h-[50px] as flex justify-end items-center gap-x-[30px] px-[20px] border-t-[1px]">
-            <p className="absolute w-full text-left  font-[sfpro-medium] text-[6px] lg:text-[13px] lg:text-center md:text-center">© 2023, Alpha Business Solutions Pvt. Ldt. All Right Reserved</p>
-            <a href="#" className="relative z-[1] text-[6px] font-[sfpro-medium] lg:text-[13px]">Privacy Policy</a>
-            <a href="#" className="relative z-[1] text-[6px] font-[sfpro-medium] lg:text-[13px]">Terms & Conditions</a>
+           <div className="fixed bottom-0 left-0 right-0 h-[30px] md:h-[40px] lg:h-[50px] flex justify-end items-center gap-x-[30px] px-[20px] border-t-[1px] bg-white">
+                <p className="w-full font-[sfpro-medium] text-[8px] md:text-[13px] lg:text-[13px] text-center ">© 2023, Alpha Business Solutions Pvt. Ltd. All Right Reserved</p>
           </div>
+
 
         </div>
       </div>
