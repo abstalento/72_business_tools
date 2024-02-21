@@ -354,6 +354,10 @@ const HomePage = () => {
         };
         db.put(doc);
       }
+
+
+
+      
       db.put(
         {
           _id: doc._id,
@@ -366,6 +370,7 @@ const HomePage = () => {
           } else {
             console.log(response, "ress");
           }
+
         }
       );
     });
@@ -385,6 +390,17 @@ const HomePage = () => {
     const list = [...itemList];
     list.splice(index, 1);
     setItemList(list);
+  };
+  const handleChange = (e) => {
+    if (e.target.value.length > 16) {
+      alert("Maximum limit reached (16 characters)");
+      return;
+    }
+    // Continue updating state or performing other actions as needed
+    setInvoiceDetails({
+      ...invoiceDetails,
+      [e.target.name]: e.target.value
+    });
   };
 
   const validateFile = (fileObj) => {
@@ -1099,7 +1115,7 @@ const HomePage = () => {
                           value={invoiceDetails.poNumber}
                           name="poNumber"
                           placeholder="(Optional)"
-                          onChange={detailsOnCng}
+                          onChange={handleChange}
                         />
                       </div>
                     </div>
@@ -1387,7 +1403,7 @@ const HomePage = () => {
                                 id="Layer_3"
                                 viewBox="0 0 32 32"
                                 onClick={closeDiscount}
-                                className="w-[5%] hidden group-hover:block cursor-pointer text-[#989EA4] hover:text-[#009e74]"
+                                className="w-[7%] hidden group-hover:block cursor-pointer text-[#989EA4] hover:text-[#009e74]"
                                 xmlns="http://www.w3.org/2000/svg"
                                 data-name="Layer 3"
                               >
@@ -2124,7 +2140,7 @@ const HomePage = () => {
                         value={invoiceDetails.poNumber}
                         name="poNumber"
                         placeholder="(Optional)"
-                        onChange={detailsOnCng}
+                        onChange={handleChange}
                       />
                     </div>
                   </div>
@@ -2410,7 +2426,7 @@ const HomePage = () => {
                           viewBox="0 0 32 32"
                           id="delete"
                           onClick={() => deleteItem(index)}
-                          className="hidden group-hover:block h-[13px] cursor-pointer text-[#989EA4] hover:text-[#009e74]"
+                          className="hidden group-hover:block h-[20px] cursor-pointer text-[#989EA4] hover:text-[#009e74]"
                           xmlns="http://www.w3.org/2000/svg"
                           data-name="Layer 3"
                         >
@@ -2634,7 +2650,7 @@ const HomePage = () => {
                           id="Layer_3"
                           viewBox="0 0 32 32"
                           onClick={closeDiscount}
-                          className="w-[5%] hidden group-hover:block cursor-pointer text-[#989EA4] hover:text-[#009e74]"
+                          className="w-[7%] hidden group-hover:block cursor-pointer text-[#989EA4] hover:text-[#009e74]"
                           xmlns="http://www.w3.org/2000/svg"
                           data-name="Layer 3"
                         >
@@ -2730,7 +2746,7 @@ const HomePage = () => {
                             id="Layer_3"
                             viewBox="0 0 32 32"
                             onClick={closeTax}
-                            className="w-[5%] hidden group-hover:block cursor-pointer text-[#989EA4] hover:text-[#009e74]"
+                            className="w-[7%] hidden group-hover:block cursor-pointer text-[#989EA4] hover:text-[#009e74]"
                             xmlns="http://www.w3.org/2000/svg"
                             data-name="Layer 3"
                           >
@@ -2920,7 +2936,7 @@ const HomePage = () => {
                           id="Layer_3"
                           viewBox="0 0 32 32"
                           onClick={closeShipping}
-                          className="w-[5%] hidden group-hover:block cursor-pointer text-[#989EA4] hover:text-[#009e74]"
+                          className="w-[7%] hidden group-hover:block cursor-pointer text-[#989EA4] hover:text-[#009e74]"
                           xmlns="http://www.w3.org/2000/svg"
                           data-name="Layer 3"
                         >
