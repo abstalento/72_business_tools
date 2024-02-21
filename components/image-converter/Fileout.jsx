@@ -42,7 +42,7 @@ const FileOut = (props) => {
     <div>
       <ToastContainer />
       <div>
-        <div className=" pl-20">
+        <div className="pl-20">
           <div className="bg-white bg-opacity-90 pt-1 flex flex-col border-[10px] border-opacity-75 border-[#010101] w-80 h-96 rounded-xl">
             {/* {props.textOut ? ( */}
             <div>

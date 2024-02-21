@@ -13,11 +13,17 @@ const FileUp = (Props) => {
     file: "",
   });
 
+  const MAX_FILE_SIZE_MB = 10; //max file size 
+
   const imageFileHandler = (e) => {
     Props.finalText("");
     const file = e.target.files[0];
     const reader = new FileReader();
     if (file) {
+      if (file.size > MAX_FILE_SIZE_MB * 1024 * 1024) {
+            toast.error(`File size exceeds ${MAX_FILE_SIZE_MB}MB limit`);   //toast message for alerting file size exceeded.
+            return;
+      }
       reader?.readAsDataURL(file);
       reader.onloadend = function (e) {
         setImage({ ...image, file: [reader.result] });
@@ -37,8 +43,9 @@ const FileUp = (Props) => {
 
   return (
     <div>
+      <ToastContainer />
       <div className="pl-20">
-        <div className="bg-black bg-opacity-25 flex flex-col place-content-center border-[10px] border-opacity-40 border-[#010101]   w-80 h-96 rounded-xl">
+        <div className="bg-black bg-opacity-25 flex flex-col place-content-center border-[10px] border-opacity-40 border-[#010101] lg:ml-[6rem] w-80 h-96 rounded-xl">
           {!image.file ? (
             
             <div onChange={imageFileHandler}>

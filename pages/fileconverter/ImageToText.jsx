@@ -13,7 +13,7 @@ export default function BgimageConvert() {
       <div className="w-[100%]">
         <BtoolsHeader Src="/images/imageToText.png" Height="25" Width="120" />
       </div>
-      <div className="bg-cover w-[100%] sm:w-[540px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] 2xl:w-[1536px] pb-2 bg-bgconvertpurple">
+      <div className="bg-cover sm:w-[540px] md:w-[768px] lg:w-[1024px] xl:w-[1490px] 2xl:w-[1536px] pb-2 bg-bgconvertpurple">
         {/* <div> */}
         {/* <Navbar /> */}
         <TitleComponent

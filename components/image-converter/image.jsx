@@ -95,7 +95,7 @@ const ImageConvert = (props) => {
         <FileUp finalText={finalTextDetails} uploadImage={convertImage} />
         <div className="h-[150px] flex flex-col justify-center items-center">
           <div
-            className={`text-sm flex w-28 justify-center bg-[#FFFFFF]/20 rounded-md text-opacity-60 bg-opacity-[50%] hover:bg-[#0064FE] ${
+            className={`text-sm flex w-28 justify-center bg-[#FFFFFF]/20 rounded-md text-opacity-60 bg-opacity-[50%] ml-[4rem] hover:bg-[#0064FE] ${
               image == "" || image == undefined
                 ? "cursor-not-allowed"
                 : "cursor-pointer"
@@ -133,7 +133,7 @@ const ImageConvert = (props) => {
            ?" 0%": null
          }
         </span>
-        <div className="bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 w-2/5 ">
+        <div className="bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 w-2/5">
           <div
             id="progressBar"
             className={`h-2.5 rounded-full ${
