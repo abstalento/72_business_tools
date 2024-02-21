@@ -144,7 +144,6 @@ let format = `${day}/${month}/${year}`;
             <View style={styles.contentTitle}>
               <Text>Details*</Text>
             </View>
-
             <View style={styles.border}>
               <View style={styles.TableHead}>
                 <Text style={styles.THeadNo}>S.No</Text>

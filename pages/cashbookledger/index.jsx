@@ -302,13 +302,13 @@ export default function Ledger(props) {
           />
           <div className="flex">
             <input
-              className="w-[35%] font-[sf-pro-medium] pl-2 text-[12px] bg-transparent"
+              className="w-[30%] font-[sf-pro-medium] md:pl-2 text-[12px] bg-transparent"
               value="Currency:"
             />
             <select
               id="currencyPopUp"
               className={
-                "text-[12px] bg-transparent font-[sf-pro-medium] cursor-pointer outline-none"
+                "text-[12px] bg-transparent my-2 font-[sf-pro-medium] cursor-pointer outline-none"
               }
               onClick={currencyClick}
             >
@@ -318,7 +318,7 @@ export default function Ledger(props) {
             </select>
             <img
               src="../icons/ledgerreport.svg"
-              className="w-9 h-9 cursor-pointer"
+              className="pt-1 w-9 h-9 cursor-pointer"
               onClick={(e) => handleReport(e)}
             />
           </div>
@@ -326,9 +326,9 @@ export default function Ledger(props) {
       </div>
 
       <div className="md:hidden">
-        <div className="flex justify-around items-start mb-[50px] h-auto w-full">
-          <div className="bg-[#e9e9e9] mt-5  flex-col items-center rounded-[10px] flex justify-start w-[80%] h-auto">
-            <div className="bg-white border-[3px] border-solid flex flex-col justify-around items-center rounded-[10px] w-full h-[15vh]">
+        <div className="flex justify-around items-start mb-[25px] h-auto w-full">
+          <div className="bg-[#e9e9e9] mt-5  flex-col items-center rounded-[10px] flex justify-start w-[80%] h-[65vh]">
+            <div className="bg-white border-[3px] border-solid flex flex-col justify-around items-center rounded-[10px] w-full h-[14vh]">
               <div className="w-[90%] mt-1 justify-start flex items-start">
                 <h1>Net Balance</h1>
               </div>
@@ -359,7 +359,7 @@ export default function Ledger(props) {
             {showInputs == true ? (
               <>
                 <div className="flex transition duration-150 ease-in-out justify-center h-[47vh] w-[90%] ">
-                  <div className="flex flex-col justify-between w-[90%] h-[46vh]">
+                  <div className="flex flex-col justify-between w-[90%] h-[48vh]">
                     <div className="flex justify-around items-center w-full h-[6.6vh]">
                       <input
                         type="date"
@@ -370,7 +370,7 @@ export default function Ledger(props) {
                         value={ledger.date}
                       />
                     </div>
-                    <div className="flex justify-around items-center w-full h-[6.6vh]">
+                    <div className="flex justify-around items-center w-full h-[5.6vh]">
                       <CustomSelect
                         title={"Ledger"}
                         onCustomSelect={onDropdownChange}
@@ -454,10 +454,10 @@ export default function Ledger(props) {
                         >
                           <img
                             src="../icons/save.svg"
-                            className="w-5 h-5"
+                            className="w-5 h-5 mr-2"
                             alt="icon"
                           />
-                          Save
+                            Save
                         </button>
                       </div>
                     </div>
@@ -468,10 +468,10 @@ export default function Ledger(props) {
           </div>
         </div>
       </div>
-
+      
       <div className="hidden sm:hidden md:hidden xl:block 2xl:hidden">
         <div className=" border-t-2 border-[#707070]/5  p-6 flex md:flex-row sm:flex-col">
-          <div className=" h-32 w-[100%] justify-between bg-[#fbfbfb] border-r-2">
+          <div className=" h-40 w-[100%] justify-between bg-[#fbfbfb] border-r-2">
             <div className="flex justify-start ">
               <button
                 className="bg-[#232E380D] p-3 font-[SpaceGrotesk-bold]"
@@ -574,22 +574,22 @@ export default function Ledger(props) {
                 </div>
               </div>
 
-              <div className=" bg-white p-3  w-[25%]  flex flex-col justify-center">
-                <div className="flex justify-around ">
-                  <label className="text-[#707070] font-[sfpro-medium] text-opacity-100">
+              <div className=" bg-white w-[20%] h-fit mr-4 flex flex-col">
+                <div className="flex justify-around">
+                  <label className="text-[#707070] font-[sfpro-medium] text-opacity-100 mt-2">
                     Balance Amount
                   </label>
-                  <div className="bg-[#fbfbfb] text-[#232E38] font-[sfpro-medium] font-bold text-opacity-100  text-lg flex justify-center items-center">
+                  <div className="bg-[#fbfbfb] text-[#232E38] font-[sfpro-medium] font-bold text-opacity-100  mt-2 text-lg flex justify-center items-center">
                     {currencySymbol}
                     {ledgerData.length > 0
                       ? ledgerData[ledgerData.length - 1]?.balance
                       : 0}
                   </div>
                 </div>
-                <div className="flex justify-center items-center mt-5">
+                <div className="flex justify-center items-center mt-4">
                   <button
                     disabled={onDisableProp()}
-                    className={`bg-[#375CEC] p-1 text-white w-24 h-11 rounded-md flex justify-center items-center ${
+                    className={`bg-[#375CEC] p-1 text-white w-24 h-11 mb-2 rounded-md flex justify-center items-center ${
                       ledger.income === "" || ledger.category === ""
                         ? "opacity-40"
                         : null
@@ -602,7 +602,7 @@ export default function Ledger(props) {
                       className="w-5 h-5"
                       alt="icon"
                     />
-                    Save
+                    <p className={`pl-1`}>Save</p>
                   </button>
                 </div>
               </div>
@@ -889,9 +889,9 @@ export default function Ledger(props) {
         </div>
       </div>
 
-      <div className="hidden sm:hidden md:block  lg:hidden">
-        <div className=" h-[25vh] border-t-2 border-[#707070]/5  p-6 flex md:flex-row ">
-          <div className="w-[80%] h-32 bg-[#fbfbfb] border-r-2">
+      <div className="hidden sm:hidden md:block lg:hidden">
+        <div className=" h-[27vh] border-t-2 border-[#707070]/5  p-6 flex md:flex-row ">
+          <div className="w-[80%] h-[33vh] bg-[#fbfbfb] border-r-2">
             <div className="flex justify-start pb-3">
               <button
                 className="bg-[#232E380D] p-3 font-[SpaceGrotesk-bold]"
@@ -902,7 +902,7 @@ export default function Ledger(props) {
               </button>
             </div>
 
-            <div className="flex flex-col justify-around h-[22vh]  ">
+            <div className="flex flex-col justify-around h-[22vh] ">
               <div className="flex justify-around">
                 <div className="border bg-[#fbfbfb] border-[#707070] border-opacity-25 rounded-lg p-[4px] h-[60px] flex flex-col">
                   <label className="text-xs text-[#707070] font-[sfpro-medium] text-opacity-100">
@@ -943,7 +943,7 @@ export default function Ledger(props) {
                   </label>
                   <input
                     type="text"
-                    className="bg-[#fbfbfb] text-sm outline-none  "
+                    className="bg-[#fbfbfb] text-xs outline-none  "
                     id="companyname"
                     placeholder="Enter the Company Name"
                     value={ledger.companyname}
@@ -997,7 +997,7 @@ export default function Ledger(props) {
               </div>
             </div>
           </div>
-          <div className="w-[20%] bg-white p-2 flex justify-around flex-col  h-[20vh] ">
+          <div className="w-[20%] bg-white ml-2 flex justify-around flex-col mt-12 h-[20vh] ">
             <div className="flex flex-col">
               <label className="text-[#707070] font-[sfpro-medium] text-opacity-100">
                 Balance Amount
@@ -1066,7 +1066,7 @@ export default function Ledger(props) {
                 <div className="w-[1%]">
                   <Image
                     width="16%"
-                    height="15px"
+                    height="20px"
                     className=""
                     src="/icons/ledgerdel.svg"
                   />
@@ -1220,7 +1220,7 @@ export default function Ledger(props) {
             <div className="w-[8%] text-[#FFFFFF] text-xs text-center">
               Bill No
             </div>
-            <div className="w-[11%] text-[#FFFFFF] text-xs text-center">
+            <div className="w-[15%] text-[#FFFFFF] text-xs text-center">
               Company Name
             </div>
             <div className="w-[25%] text-[#FFFFFF] text-xs text-center">
@@ -1240,8 +1240,8 @@ export default function Ledger(props) {
             </div>
             <div className="w-[1%]">
               <Image
-                width="16%"
-                height="15px"
+                width="10%"
+                height="16px"
                 className=""
                 src="/icons/ledgerdel.svg"
               />
