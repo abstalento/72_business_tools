@@ -744,10 +744,10 @@ const HomePage = () => {
                     className=" w-[100%] flex flex-col cursor-pointer z-50"
                     onChange={imageFileHandler}
                   >
-                    <span className="w-[100%] h-[35px] top-[75px] relative flex flex-col justify-center items-center cursor-pointer">
+                    <span className="w-[95%] h-[100px] top-[75px] relative flex flex-col justify-center items-center cursor-pointer">
                       <Image
                         width="18%"
-                        height="18px"
+                        height="20px"
                         className=" h-[18px] cursor-pointer"
                         src="/icons/photo-camera.svg"
                       />

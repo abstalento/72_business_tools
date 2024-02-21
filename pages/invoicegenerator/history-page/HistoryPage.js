@@ -164,7 +164,7 @@ const HistoryPage = (props) => {
           invoiceData.push({
             currencyValue,
             amountPaid,
-            // balanceDue,
+            balanceDue,
             billDate,
             billFrom,
             billTo,
