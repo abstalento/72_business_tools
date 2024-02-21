@@ -27,11 +27,85 @@ const GstHead = ({ activeGstData, headValue, gstId, useEffectCall, exportState, 
     activeGstData(data)
   };
 
+  // const headChange = (event) => {
+  //   const { name, value } = event.target
+  //   setHeadDatas({ ...headDatas, [name]: name == 'contactNumber' ? value.replace(/[^0-9.]/g, "").replace(/(\..*?)\..*/g, "$1") : value })
+  //   headValue(name, value)
+  // }
+
   const headChange = (event) => {
-    const { name, value } = event.target
-    setHeadDatas({ ...headDatas, [name]: name == 'contactNumber' ? value.replace(/[^0-9.]/g, "").replace(/(\..*?)\..*/g, "$1") : value })
-    headValue(name, value)
+    const { name, value } = event.target;
+
+    let sanitizedValue;
+
+    if (name === "companyName") {
+      sanitizedValue = value.replace(/[^A-Za-z]/g, "");
+    }
+    else {
+      sanitizedValue = value;
+    }
+
+    setHeadDatas({ ...headDatas, [name]: sanitizedValue });
   }
+
+
+  // const headChangeCompany=(event)=>{
+  //   const { name, value } = event.target
+  //   let c=0;
+  //   // alert(headDatas.companyName);
+  //   for(let i=0;i<value.length;i++){
+  //     if(value[i]>=0 && value[i]<=9){
+  //       c++;
+  //     }
+  //     setHeadDatas({...headDatas,[name]:value})
+  //     headDatas.companyName.slice()
+  //   }
+  //   headValue(name, value)
+  // }
+
+  
+  // const headChangeCompany = (event) => {
+  //   const { name, value } = event.target;
+  
+  //   // Check if the field is companyName and remove numbers
+  //   const sanitizedValue = name === 'companyName' ? value.replace(/[0-9]/g, '') : value;
+  
+  //   setHeadDatas((prevHeadDatas) => ({
+  //     ...prevHeadDatas,
+  //     [name]: name === 'companyName' ? sanitizedValue : prevHeadDatas[name],
+  //   }));
+  //   headValue(name, sanitizedValue);
+  // };
+
+
+//   const headChangeCompany = (event) => {
+//     const { name, value } = event.target;
+  
+//     // Check if the field is companyName and remove non-alphabetic characters
+//     const sanitizedValue = name === 'companyName' ? value.replace(/[^a-zA-Z]/g, '') : value;
+  
+//     setHeadDatas((prevHeadDatas) => ({
+//         ...prevHeadDatas,
+//         [name]: sanitizedValue,
+//     }));
+//     headValue(name, sanitizedValue);
+// };
+
+  const headChangeCompany = (event) => {
+    const { name, value } = event.target;
+
+    let sanitizedValue;
+
+    if (name === "companyName") {
+      sanitizedValue = value.replace(/[^A-Za-z]/g, "");
+    }
+    else {
+      sanitizedValue = value;
+    }
+
+    setHeadDatas({ ...headDatas, [name]: sanitizedValue });
+  };
+
 
   const salesGst = headCalculation?.gstSales
     .reduce((total, item) => Number(total) + Number(item.salesGstAmount), 0)
@@ -141,12 +215,13 @@ const GstHead = ({ activeGstData, headValue, gstId, useEffectCall, exportState, 
                   Company Name
                 </span>
                 <textarea
-                  id="companyName"
-                  className="w-[100%] pl-2 resize-none h-[20px] block overflow-hidden font-[sf-pro-medium] text-[#232E38] focus:outline-none rounded-md resize-ta"
-                  value={headDatas.companyName}
-                  name="companyName"
-                  placeholder="company name"
-                  onChange={headChange}
+                      type="text"
+                      id="companyName"
+                      className="w-[100%] pl-2 resize-none h-[20px] block overflow-hidden font-[sf-pro-medium] text-[#232E38] focus:outline-none rounded-md resize-ta"
+                      value={headDatas.companyName}
+                      name="companyName"
+                      placeholder="company name"
+                      onChange={headChangeCompany}
                 ></textarea>
               </div>
               <div
@@ -347,7 +422,7 @@ const GstHead = ({ activeGstData, headValue, gstId, useEffectCall, exportState, 
               <span className="text-[10px] text-[#707070]">
                 PURCHASE GST AMOUNT
               </span>
-              <h1 className="h-[55px] w-[100%] text-[22px] bg-[#F6F6F6] mt-2 flex justify-center items-center">
+              <h1 className="md:mt-[8px] mt-0 h-[55px] w-[100%] text-[22px] bg-[#F6F6F6] mt-2 flex justify-center items-center">
                 {currencyValue}{purchaseGst}/-
               </h1>
             </div>

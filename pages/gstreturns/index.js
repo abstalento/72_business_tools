@@ -364,10 +364,13 @@ const GstReturns = () => {
       <div className="flex justify-between items-center pr-2">
         <BtoolsHeader Src="/images/gstReturnsLogo.png" Height="35" Width="80" />
         <div>
-              <input
+              {/* <input
                 className="w-[35%] font-[sf-pro-medium] pl-2 text-[12px] bg-transparent"
                 value="Currency:"
-              />
+              /> */}
+              <span
+                className="w-[35%] font-[sf-pro-medium] pl-2 text-[12px] bg-transparent mr-5"
+              >Currency</span>
               <select
                 id="currencyPopUp"
                 className={
