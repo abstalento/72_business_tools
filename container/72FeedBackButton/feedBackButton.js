@@ -44,7 +44,7 @@ const FeedBackButton = ({ Src, Path, appName }) => {
       );
   }
   return (
-    <div className="w-[100%] bg-black text-white text-center p-2 flex justify-center items-center space-x-7">
+    <div className="w-[100%] bg-black text-white text-center p-2 flex justify-center items-center space-x-7 mt-10">
       <p className="text-sm">Give feedback What do you experience with our product ?</p>
       <button className="bg-white text-[100%] text-black font-[sf-pro-medium] p-2 rounded-md w-[30%] md:w-[15%] cursor-not-allowed" onClick={feedBackData}>FEEDBACK</button>
       {/* <form className="contact-form" onSubmit={sendEmail}>
