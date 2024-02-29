@@ -2,10 +2,11 @@ Break Even Analysis Calculator:
 
 ->	Output 
     ->  Calculate (Props: fixedCost, variableCost, quantity, sellingPrice)
+    ->  Currency  (Props: currencyName)
 
 ->  Chart 
     ->  Filter Controls (Props: productName, quantity ( X-axis ), sellingPrice( Y-axis ))
 
 ->  Pdf
     -> PdfContents (Props:  Logo, companyName, productName, fixedCost, variableCost, 
-                    quantity , sellingPrice, outputInUnits, outputInSalesRevenue, Graph)z
+                    quantity , sellingPrice, outputInUnits, outputInSalesRevenue, Graph)
