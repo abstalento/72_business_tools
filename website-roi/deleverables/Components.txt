@@ -1,0 +1,38 @@
+----> _app
+
+    ----> Header
+
+    ----> Content
+
+            (input)
+                ----> WebsiteCosts
+                ----> LeadGeneration
+                ----> SubFielt (conversion rate and avg sale value)
+
+            (output)
+                ---->  outputROI
+                ----> TotalCost
+                ----> TimePeriod
+
+            (PDF)
+                ----> pdf
+
+    ---->Footer    
+
+
+
+ [Props]
+
+    I input field
+        1 - [websiteCosts
+            setWebsiteCosts]
+        2- [leadGeneration
+        setLeadGeneration]
+        3 -[conversionRate
+            setConversionRate]
+        4 - [averageSaleValue
+            setAverageSaleValue] 
+    II output 
+        1 - [websiteROI]
+        2 - [revenueBreakdown]
+        3 - [timePeriod]
