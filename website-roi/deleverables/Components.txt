@@ -27,7 +27,7 @@
         1 - [websiteCosts
             setWebsiteCosts]
         2- [leadGeneration
-        setLeadGeneration]
+            setLeadGeneration]
         3 -[conversionRate
             setConversionRate]
         4 - [averageSaleValue
