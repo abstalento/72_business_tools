@@ -1,6 +1,8 @@
 Break Even Analysis Calculator:
 
-->	Output 
+->  SideBar  (Props: currentBackgroundColor)
+
+->	BreakEvenCalculate 
     ->  Calculate (Props: fixedCost, variableCost, quantity, sellingPrice)
     ->  Currency  (Props: currencyName)
 
