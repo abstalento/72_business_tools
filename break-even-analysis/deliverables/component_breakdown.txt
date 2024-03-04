@@ -2,13 +2,13 @@ Break Even Analysis Calculator:
 
 ->  SideBar  (Props: currentBackgroundColor)
 
-->	BreakEvenCalculate 
-    ->  Calculate (Props: fixedCost, variableCost, quantity, sellingPrice)
-    ->  Currency  (Props: currencyName)
+->	EquilibriumOutput 
+    ->  EquilibriumCalculation (Props: fixedCost, variableCost, quantity, sellingPrice)
+    ->  Currency  (Props: currencyName or currencySymbols)
 
 ->  Chart 
     ->  Filter Controls (Props: productName, quantity ( X-axis ), sellingPrice( Y-axis ))
 
 ->  Pdf
-    -> PdfContents (Props:  Logo, companyName, productName, fixedCost, variableCost, 
-                    quantity , sellingPrice, outputInUnits, outputInSalesRevenue, Graph)
+    -> PdfContents (Props:  companyLogo, companyName, productName, fixedCost, variableCost, 
+                    quantity , sellingPrice, equilibriumOutputInUnits, equilibriumOutputInSalesRevenue, Graph)
