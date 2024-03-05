@@ -10,7 +10,7 @@
                 ----> SubFielt (conversion rate and avg sale value)
 
             (output)
-                ---->  outputROI
+                ----> outputROI
                 ----> TotalCost
                 ----> TimePeriod
 
@@ -22,8 +22,10 @@
 
 
  [Props]
-
-    I input field
+    I Header
+        1 - [currency
+            setCurrency]
+    II input field
         1 - [websiteCosts
             setWebsiteCosts]
         2- [leadGeneration
@@ -32,7 +34,10 @@
             setConversionRate]
         4 - [averageSaleValue
             setAverageSaleValue] 
-    II output 
+    III output 
         1 - [websiteROI]
         2 - [revenueBreakdown]
         3 - [timePeriod]
+    IV pdf  
+        1 - [websiteROI]
+        2 - [timePeriod]
