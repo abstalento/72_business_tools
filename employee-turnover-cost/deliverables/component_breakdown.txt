@@ -1,7 +1,0 @@
-git addEmployee Turnover Cost Calculator
-==>   Header Component
-==>   Footer Component
-==>   Main/Home Component (Parent)
-==>   Add New Section Component
-==>   Result Component
-==>   Export Component

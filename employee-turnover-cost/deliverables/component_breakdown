@@ -1,0 +1,10 @@
+Employee Turnover Cost Calculator
+
+--->Header
+    --->Currency(Props:currType)
+--->Main
+    --->Result (Props: inputValue, totalCost)
+    --->Input (Props: inputValue, categoryName, currType)
+    --->AddNewSection
+    --->Export (Props: currType, employee_name, company_name, inputValue, categoryName, totalCost)
+--->Footer
