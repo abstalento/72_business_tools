@@ -1,13 +1,23 @@
+import React from 'react'
 import Head from 'next/head';
+import Header from '../Components/Header';
+import Content from '../Components/Content';
+import Footer from '../Components/Footer';
+import useWindowSize from '../public/hooks/useWindowSize';
+
 
 export default function Home() {
+  const {width} = useWindowSize();
   return (
     <div>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <h1 className='text-green-800 capitalize'>welcome to website ROI</h1>
+      <Header 
+        title = "WEB ROI CALCULATOR"
+        width = {width}
+      />
+      <Content 
+      />
+      <Footer />
+
     </div>
   );
 }
