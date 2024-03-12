@@ -1,15 +1,54 @@
-import Head from "next/head";
+import Header from "../components/Header";
+import InputTab from "../components/InputTab";
+import Result from "../components/Result";
+import TopContainer from "../components/TopContainer";
+import Feedback from "../components/Feedback";
+import { useState } from "react";
 
 export default function Home() {
+  const [fixedCost, setFixedCost] = useState("");
+  const [variableCost, setVariableCost] = useState("");
+  const [unit, setUnit] = useState("");
+  const [sellingPrice, setSellingPrice] = useState("");
+  const inputs = (inFixedCost, inVariableCost, inUnit, inSellingPrice) => {
+    setFixedCost(inFixedCost);
+    setVariableCost(inVariableCost);
+    setUnit(inUnit);
+    setSellingPrice(inSellingPrice);
+  };
+
   return (
-    <div>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <h1 className="text-red-800 capitalize">
-        welcome to break even analysis
-      </h1>
-    </div>
+    <>
+      <div>
+        <Header />
+      </div>
+      <div className="flex flex-col m-0 h-[60vh] bg-[#fddd9a] w-full">
+        <div className="relative block w-[100%] h-[70vh]">
+          <div className="h-[20vh] contents">
+            <TopContainer />
+          </div>
+        </div>
+        <div className="flex lg:flex-row flex-col relative justify-center w-full">
+          <div className="xl:w-[30%] md:w-[50%] lg:ml-[2%] md:ml-[25%] sm:ml-[25%] ml-[10%] flex relative md:justify-center md:place-items-center md:items-center">
+            <InputTab inputValues={inputs} />
+          </div>
+          <div
+            className="lg:w-[75%] h-auto md:w-[90%] lg:ml-[0] mt-[2%] lg:mt-[0] md:mt-[2%] md:ml-[5%] sm:ml-[25%] ml-[2%] flex relative md:justify-center md:place-items-center md:items-center
+            lg:mr-[6%] mr-[5%]
+            "
+          >
+            <Result
+              fixedCost={fixedCost}
+              variableCost={variableCost}
+              unit={unit}
+              sellingPrice={sellingPrice}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="relative contents">
+        <Feedback />
+      </div>
+    </>
   );
 }
