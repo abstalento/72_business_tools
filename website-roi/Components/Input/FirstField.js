@@ -5,88 +5,22 @@ import WebCost from './FirstField/WebCost';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-const FirstField = () => {
-  const [selectedContent, setSelectedContent] = useState('webcost');
-  const [webCostValues, setWebCostValues] = useState([]);
-  const [leadCostValues, setLeadCostValues] = useState([]);
-  const [totalWebCost, setTotalWebCost] = useState(5);
-  const [totalLeadCost, setTotalLeadCost] = useState(0);
+const FirstField = (
+  {fields,setFields,handleAddField,handleAddTotal,total,handleFieldChange,handleLabelChange,
+    handleDeleteField,setTotal,totalWebCost,selectedContent,addWebCost,webCostValues,onClickTotal,clearValues,
+    calculateTotalValue,handleItemClick,addLeadCost,leadCostValues,expenses,handleExpensesChange,
+    totalCost,handleCostChange,lead,handleLeadChange,calculateLeadCost,leadCost }) => {
 
-  const [fields, setFields] = useState([{ id: 1, label: 'Development', value:''}]);
-  const [total, setTotal] = useState(0);
-
-  useEffect(() => {
-    calculateTotal();
-  }, [fields]);
-
-  const handleFieldChange = (id, value) => {
-    const updatedFields = fields.map((field) =>
-      field.id === id ? { ...field, value } : field
-    );
-    setFields(updatedFields);
-  };
-
-  const handleLabelChange = (id, label) => {
-    const updatedFields = fields.map((field) =>
-      field.id === id ? { ...field, label } : field
-    );
-    setFields(updatedFields);
-  };
-
-  const handleAddField = () => {
-    const newId = fields.length + 1;
-    setFields([...fields, { id: newId, label: '', value: '' }]);
-  };
-
-  const handleDeleteField = (id) => {
-    const filteredFields = fields.filter((field) => field.id !== id);
-    setFields(filteredFields);
-  };
-
-  const calculateTotalValue = () => {
-    const totalValue = fields.reduce((total, field) => total + parseInt(field.value || 0), 0);
-    setTotal(totalValue);
-  };
-  // ... (rest of the code for webcost) ...
-  const handleItemClick = (content) => {
-    setSelectedContent(content);
-  };
-
-  const addWebCost = (cost) => {
-    setWebCostValues([...webCostValues, cost]);
-  };
-
-  const addLeadCost = (cost) => {
-    setLeadCostValues([...leadCostValues, cost]);
-  };
-
-  const calculateTotal = () => {
-    const webCostSum = webCostValues.reduce((acc, currentValue) => acc + currentValue, 0);
-    const leadCostSum = leadCostValues.reduce((acc, currentValue) => acc + currentValue, 0);
-
-    setTotalWebCost(webCostSum);
-    setTotalLeadCost(leadCostSum);
-  };
-
-  const clearValues = () => {
-    if (selectedContent === 'webcost') {
-      setWebCostValues([]);
-      setTotalWebCost(0);
-    } else if (selectedContent === 'leadcost') {
-      setLeadCostValues([]);
-      setTotalLeadCost(0);
-    }
-  };
-
-  const handleAddWebTotal = (e) => {
-    e.preventDefault();
-    const webTotal = fields.reduce((total, field) => total + parseInt(field.value || 0), 0);
-    setTotalWebCost(webTotal);
-  };
   return (
-    <main className='z-10'>
-      <section className='relative h-[63vh] w-[500px] mt-[50%] justify-center bg-gray-100 overflow-y-scroll shadow'>
-        <div className='flex gap-2 lg:fixed justify-center items-center text-white ml-[10%] bg-black h-[10vh] rounded-lg mt-4 cursor-pointer  w-[20%]'>
+    <main className='z-10'
+    >
+      <section className='relative h-[63vh] w-[500px] mt-[50%] justify-center bg-gray-100 overflow-y-scroll shadow'
+      style={{ boxShadow: '10px 0px 10px rgba(0, 0, 0, 0.3)' }}  
+      >
+        <div 
+        className='flex gap-2 absolute justify-center items-center text-white ml-[15%] bg-black h-[10vh] rounded-lg mt-4 cursor-pointer  w-[70%]'
+        style={{ boxShadow: '10px 10px 10px rgba(0, 0, 0, 0.4)' }}
+        >
           <button 
             onClick={() => handleItemClick('webcost')} 
             className={selectedContent === 'webcost' ? 'active' : ''}
@@ -121,7 +55,7 @@ const FirstField = () => {
             fields={fields}
             setFields={setFields}
             handleAddField={handleAddField}
-            handleAddWebTotal={handleAddWebTotal}
+            handleAddTotal={handleAddTotal}
             handleFieldChange={handleFieldChange}
             total={total}
             handleLabelChange={handleLabelChange}
@@ -129,6 +63,7 @@ const FirstField = () => {
             setValue={addWebCost}
             setTotal={setTotal}
             totalWebCost={totalWebCost}
+            onClickTotal = {onClickTotal}
             />
             <ul>
               {webCostValues.map((value, index) => (
@@ -139,7 +74,17 @@ const FirstField = () => {
         )}
         {selectedContent === 'leadcost' && (
           <div>
-            <LeadCost setValue={addLeadCost} />
+            <LeadCost 
+            setValue={addLeadCost}
+            expenses = {expenses}
+            handleExpensesChange = {handleExpensesChange}
+            totalCost = {totalCost}
+            handleCostChange = {handleCostChange }
+            lead = {lead}
+            handleLeadChange = {handleLeadChange}
+            calculateLeadCost = {calculateLeadCost}
+            leadCost = {leadCost}
+            />
             <ul>
               {leadCostValues.map((value, index) => (
                 <li key={index}>{value}</li>
@@ -148,7 +93,9 @@ const FirstField = () => {
           </div>
         )}
       </section>
-      <section className='bg-gray-100 h-[10.5vh] mt-[2%] total overflow-hidden flex justify-center items-center'>
+      <section className='bg-gray-100 h-[10.5vh] mt-[2%] total overflow-hidden flex justify-end items-center p-6'
+        style={{ boxShadow: '10px 10px 10px rgba(0, 0, 0, 0.2)' }}
+      >
         <button 
           onClick={clearValues} 
           className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mr-4 focus:outline-none focus:shadow-outline'
@@ -156,7 +103,7 @@ const FirstField = () => {
           Clear
         </button>
         <button 
-          onClick={calculateTotalValue} 
+          onClick={onClickTotal} 
           className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded  focus:outline-none focus:shadow-outline'
         >
           Calculate

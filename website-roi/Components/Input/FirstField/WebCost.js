@@ -2,48 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaTrashAlt } from "react-icons/fa";
 import { IoIosAdd } from "react-icons/io";
 
-const WebCost = ({fields,setFields,handleAddField,handleAddWebTotal,total,handleFieldChange,handleLabelChange,handleDeleteField,setTotal,totalWebCost}) => {
-  // const [fields, setFields] = useState([{ id: 1, label: 'Development', value:''}]);
-  // const [total, setTotal] = useState(0);
-
-  // useEffect(() => {
-  //   calculateTotal();
-  // }, [fields]);
-
-  // const handleFieldChange = (id, value) => {
-  //   const updatedFields = fields.map((field) =>
-  //     field.id === id ? { ...field, value } : field
-  //   );
-  //   setFields(updatedFields);
-  // };
-
-  // const handleLabelChange = (id, label) => {
-  //   const updatedFields = fields.map((field) =>
-  //     field.id === id ? { ...field, label } : field
-  //   );
-  //   setFields(updatedFields);
-  // };
-
-  // const handleAddField = () => {
-  //   const newId = fields.length + 1;
-  //   setFields([...fields, { id: newId, label: '', value: '' }]);
-  // };
-
-  // const handleDeleteField = (id) => {
-  //   const filteredFields = fields.filter((field) => field.id !== id);
-  //   setFields(filteredFields);
-  // };
-
-  // const calculateTotal = () => {
-  //   const totalValue = fields.reduce((total, field) => total + parseInt(field.value || 0), 0);
-  //   setTotal(totalValue);
-  // };
-
-  // const handleAddWebTotal = () => {
-  //   const webTotal = fields.reduce((total, field) => total + parseInt(field.value || 0), 0);
-  //   alert(`Total Web Cost: ${webTotal}`);
-  // };
-
+const WebCost = ({fields,setFields,handleAddField,handleAddTotal,total,handleFieldChange,handleLabelChange,handleDeleteField,setTotal,totalWebCost}) => {
   return (
     <section className='mt-[20%]'>
       <form onSubmit={(e) => e.preventDefault()} className="space-y-4 z-1 static">
@@ -86,23 +45,13 @@ const WebCost = ({fields,setFields,handleAddField,handleAddWebTotal,total,handle
         <div className="flex">
           <button
             type='button'
-            onClick={handleAddField}
+            onClick={handleAddField}z
             className='bg-green-500 ml-2 flex gap-2 h-10 w-[25%] justify-center items-center rounded-lg text-white transition-colors hover:bg-red-500'
           >
             <IoIosAdd /> <span>Add Field</span>
           </button>
-          <button
-            type='button'
-            onClick={handleAddWebTotal}
-            className='bg-green-500 ml-2 flex absolute right-3 gap-2 h-10 w-[25%] justify-center items-center rounded-lg text-white transition-colors hover:bg-red-500'
-          >
-            <IoIosAdd /> <span>Add Web</span>
-          </button>
         </div>
       </form>
-      <div className="mt-4 text-center">
-        Total: {totalWebCost}
-      </div>
     </section>
   );
 };

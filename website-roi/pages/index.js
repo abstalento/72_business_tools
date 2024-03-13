@@ -16,9 +16,9 @@ export default function Home() {
     <div>
       <main className='relative flex justify-center items-center w-screen h-screen overflow-hidden mt-[-3%]' style={{ zIndex: 0 }}>
       <div className='absolute lg:flex h-[50%] bg-[#FFCA64] gap-[1%] w-full top-[10%] justify-center items-center'>
-          <FirstField />
-          <SubField />
-          {/* <Content /> */}
+          {/* <FirstField /> */}
+          {/* <SubField /> */}
+          <Content />
       </div>
     </main>
     </div>
