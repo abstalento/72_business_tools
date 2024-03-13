@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const InputTab = (props) => {
   const [itemList, setItemList] = useState({
     fixedCost: "",
     variableCost: "",
-    price: "",
-    unit: "",
+    pricePerUnit: "",
+    quantity: "",
   });
-  let count = 0;
 
   const [selectedTab, setSelectedTab] = useState("unit");
 
@@ -19,22 +18,33 @@ const InputTab = (props) => {
     setItemList((prevState) => ({ ...prevState, [name]: value }));
   };
   const inputHandler = () => {
-    if (itemList.price == 0) {
-      itemList.price = itemList.fixedCost + itemList.variableCost;
-    }
     props.inputValues(
       itemList.fixedCost,
       itemList.variableCost,
-      itemList.unit,
-      itemList.price
+      itemList.pricePerUnit,
+      itemList.quantity
     );
+  };
+  const handleTabChange = (tab) => {
+    setSelectedTab(tab);
+    if (
+      (tab === "price" || tab === "unit") &&
+      itemList.variableCost.trim() !== ""
+    ) {
+      setItemList((prevState) => ({
+        ...prevState,
+        variableCost: "",
+        pricePerUnit: "",
+        quantity: "",
+      }));
+    }
   };
   const clearInputs = () => {
     setItemList({
       fixedCost: "",
       variableCost: "",
-      price: "",
-      unit: "",
+      pricePerUnit: "",
+      quantity: "",
     });
     props.inputValues("", "", "", "");
   };
@@ -54,7 +64,7 @@ const InputTab = (props) => {
               id="unit"
               className="p-1 border-8 cursor-pointer border-red-950 ease-in-out duration-300"
               defaultChecked
-              onClick={() => setSelectedTab("unit")}
+              onClick={() => handleTabChange("unit")}
             />
             <label
               htmlFor="unit"
@@ -71,7 +81,7 @@ const InputTab = (props) => {
               name="tab"
               id="price"
               className="p-1 cursor-pointer ease-in-out duration-300"
-              onClick={() => setSelectedTab("price")}
+              onClick={() => handleTabChange("price")}
             />
             <label
               className={`m-1 text-sm text-[sm-pro-medium] cursor-pointer ${
@@ -105,7 +115,9 @@ const InputTab = (props) => {
           </div>
           <div className="relative flex-col block mt-1">
             <label className="text-xs" htmlFor="variableCost">
-              variable cost per unit
+              {selectedTab === "unit"
+                ? "variable cost per unit"
+                : "Total Variable Cost"}
             </label>
             <input
               type="number"
@@ -126,24 +138,24 @@ const InputTab = (props) => {
                 type="number"
                 className="mt-2 mb-2 w-[90%] h-auto border-b-2 border-b-black text-sm font-[sm-pro-medium] placeholder:pb-2 outline-none [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none"
                 placeholder="Eg. 50,000/-"
-                name="unit"
+                name="pricePerUnit"
                 onKeyDown={removeCharacter}
-                value={itemList.unit}
+                value={itemList.pricePerUnit}
                 onChange={handleChange}
               />
             </div>
           ) : (
             <div className="relative flex-col block mt-1">
               <label className="text-xs" htmlFor="Input">
-                Selling Price
+                Number Of Units
               </label>
               <input
                 type="number"
                 className="mt-2 mb-2 w-[90%] h-auto border-b-2 border-b-black text-sm font-[sm-pro-medium] placeholder:pb-2 outline-none [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none"
-                placeholder="Eg. 50,000/-"
-                name="price"
+                placeholder="Eg. 50/-"
+                name="quantity"
                 onKeyDown={removeCharacter}
-                value={itemList.price}
+                value={itemList.quantity}
                 onChange={handleChange}
               />
             </div>

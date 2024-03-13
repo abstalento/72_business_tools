@@ -8,13 +8,13 @@ import { useState } from "react";
 export default function Home() {
   const [fixedCost, setFixedCost] = useState("");
   const [variableCost, setVariableCost] = useState("");
-  const [unit, setUnit] = useState("");
-  const [sellingPrice, setSellingPrice] = useState("");
-  const inputs = (inFixedCost, inVariableCost, inUnit, inSellingPrice) => {
+  const [pricePerUnit, setPricePerUnit] = useState("");
+  const [quantity, setQuantity] = useState("");
+  const inputs = (inFixedCost, inVariableCost, inPricePerUnit, inQuantity) => {
     setFixedCost(inFixedCost);
     setVariableCost(inVariableCost);
-    setUnit(inUnit);
-    setSellingPrice(inSellingPrice);
+    setPricePerUnit(inPricePerUnit);
+    setQuantity(inQuantity);
   };
 
   return (
@@ -40,9 +40,10 @@ export default function Home() {
             <Result
               fixedCost={fixedCost}
               variableCost={variableCost}
-              unit={unit}
-              sellingPrice={sellingPrice}
+              pricePerUnit={pricePerUnit}
+              quantity={quantity}
             />
+            {console.log(fixedCost, variableCost, pricePerUnit, quantity)}
           </div>
         </div>
       </div>

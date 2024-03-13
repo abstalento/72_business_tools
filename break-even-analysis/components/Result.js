@@ -1,14 +1,14 @@
 import React from "react";
-const Result = ({ fixedCost, variableCost, unit, sellingPrice }) => {
+const Result = ({ fixedCost, variableCost, pricePerUnit, quantity }) => {
   const bepUnit = () => {
-    const result = fixedCost / (sellingPrice - variableCost);
+    const result = fixedCost / (Number(pricePerUnit) - Number(variableCost));
     return result > 0 || result < 0 ? parseFloat(result.toFixed(2)) : 0;
   };
 
   const unitValue = bepUnit();
 
   const bepPrice = () => {
-    const result = unitValue * sellingPrice;
+    const result = (Number(fixedCost) + Number(variableCost)) / quantity;
     return result > 0 || result < 0 ? parseFloat(result.toFixed(2)) : 0;
   };
 
@@ -46,17 +46,15 @@ const Result = ({ fixedCost, variableCost, unit, sellingPrice }) => {
 
               <div className="bg-slate-500/15 w-[85%] h-[14vh] mt-[5%] rounded-lg">
                 <p className="font-sans font-medium mt-[1%] flex flex-col items-center text-sm">
-                  Your Break Even Point is nothing:
+                  Your Break Even Point is:
                 </p>
                 <p className="text-center font-sans text-[25px] leading-8 font-bold">
-                  {unitValue} <span className="ml-[5%]">(Unit)</span>
-                </p>
-                <p className="text-center font-sans text-[25px] leading-10 font-bold">
-                  {sellingPriceValue} <span className="ml-[5%]">(Price)</span>
+                  {quantity == 0 ? unitValue : sellingPriceValue}
+                  <span className="ml-[5%]">
+                    ({quantity == 0 ? "Unit" : "Price"})
+                  </span>
                 </p>
               </div>
-              {console.log(fixedCost, variableCost, unit, sellingPrice)}
-              {console.log(unitValue, sellingPriceValue)}
               <div>
                 <button className="text-white bg-red-600 w-[85%] p-[3%] mt-[5%] rounded-lg font-bold text-2xl">
                   Download
