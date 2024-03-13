@@ -1,15 +1,15 @@
 import React from "react";
 const Result = ({ fixedCost, variableCost, unit, sellingPrice }) => {
   const bepUnit = () => {
-    const result = fixedCost / (sellingPrice - variableCost);
-    return result >= 0 ? parseFloat(result.toFixed(2)) : 0;
+    const result = fixedCost / (sellingPrice * unit - variableCost * unit);
+    return result > 0 || result < 0 ? parseFloat(result.toFixed(2)) : 0;
   };
 
   const unitValue = bepUnit();
 
   const bepPrice = () => {
     const result = unitValue * sellingPrice;
-    return result >= 0 ? parseFloat(result.toFixed(2)) : 0;
+    return result > 0 || result < 0 ? parseFloat(result.toFixed(2)) : 0;
   };
 
   const sellingPriceValue = bepPrice();

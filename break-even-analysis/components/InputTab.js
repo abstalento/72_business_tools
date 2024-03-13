@@ -19,6 +19,9 @@ const InputTab = (props) => {
     setItemList((prevState) => ({ ...prevState, [name]: value }));
   };
   const inputHandler = () => {
+    if (itemList.price == 0) {
+      itemList.price = itemList.fixedCost + itemList.variableCost;
+    }
     props.inputValues(
       itemList.fixedCost,
       itemList.variableCost,
