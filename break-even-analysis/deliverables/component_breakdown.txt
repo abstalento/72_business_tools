@@ -1,0 +1,14 @@
+Break Even Analysis Calculator:
+
+->  SideBar  (Props: currentBackgroundColor)
+
+->	EquilibriumOutput 
+    ->  EquilibriumCalculation (Props: fixedCost, variableCost, quantity, sellingPrice)
+    ->  Currency  (Props: currencyName or currencySymbols)
+
+->  Chart 
+    ->  Filter Controls (Props: productName, quantity ( X-axis ), sellingPrice( Y-axis ))
+
+->  Pdf
+    -> PdfContents (Props:  companyLogo, companyName, productName, fixedCost, variableCost, 
+                    quantity , sellingPrice, equilibriumOutputInUnits, equilibriumOutputInSalesRevenue, Graph)
