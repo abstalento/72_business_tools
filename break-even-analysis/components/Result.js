@@ -1,7 +1,7 @@
 import React from "react";
 const Result = ({ fixedCost, variableCost, unit, sellingPrice }) => {
   const bepUnit = () => {
-    const result = fixedCost / (sellingPrice * unit - variableCost * unit);
+    const result = fixedCost / (sellingPrice - variableCost);
     return result > 0 || result < 0 ? parseFloat(result.toFixed(2)) : 0;
   };
 
@@ -46,7 +46,7 @@ const Result = ({ fixedCost, variableCost, unit, sellingPrice }) => {
 
               <div className="bg-slate-500/15 w-[85%] h-[14vh] mt-[5%] rounded-lg">
                 <p className="font-sans font-medium mt-[1%] flex flex-col items-center text-sm">
-                  Your Break Even Point is:
+                  Your Break Even Point is nothing:
                 </p>
                 <p className="text-center font-sans text-[25px] leading-8 font-bold">
                   {unitValue} <span className="ml-[5%]">(Unit)</span>
