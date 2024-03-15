@@ -77,7 +77,7 @@ export const currency = {
     GEL: { currencyName: 'Georgian Lari', id: 'GEL' },
     HTG: { currencyName: 'Haitian Gourde', id: 'HTG' },
     INR: { currencyName: 'Indian Rupee', currencySymbol: '₹', id: 'INR' },
-    JOD: { currencyName: 'Jordanian Dinar', id: 'JOD' },
+    JOD: { currencyName: 'Jordanian Dinar', id: 'JOD' },  
     KRW: { currencyName: 'South Korean Won', currencySymbol: '₩', id: 'KRW' },
     LBP: { currencyName: 'Lebanese Lira', currencySymbol: '£', id: 'LBP' },
     MWK: { currencyName: 'Malawian Kwacha', id: 'MWK' },
