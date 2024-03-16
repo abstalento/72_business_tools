@@ -89,7 +89,7 @@ const Result = ({ fixedCost, variableCost, pricePerUnit, quantity }) => {
 
   function downloadPdf() {
     const doc = new jsPDF();
-    doc.setFillColor(253, 221, 154); // Adjust color values as needed
+    doc.setFillColor(253, 221, 154);
     doc.rect(
       0,
       0,
