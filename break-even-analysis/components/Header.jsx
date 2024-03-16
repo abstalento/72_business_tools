@@ -12,9 +12,9 @@ function Header() {
             width={100}
             alt="Logo"
             className="cursor-pointer"
-            onClick={() => (
-              (window.open = "https://www.google.com"), (target = "_blank")
-            )}
+            // onClick={() => (
+            //   (window.open = "https://www.google.com"), (target = "_blank")
+            // )}
           />
         </div>
       </div>

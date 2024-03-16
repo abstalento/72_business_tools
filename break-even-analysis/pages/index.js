@@ -12,27 +12,6 @@ export default function Home() {
   const [pricePerUnit, setPricePerUnit] = useState("");
   const [quantity, setQuantity] = useState("");
 
-  // const [currencySymbol, setCurrencySymbol] = useState("₹");
-  // const [currencyId, setCurrencyId] = useState("INR");
-  // const [currencyData, setCurrencyData] = useState({
-  //   // currencySymbol:'₹',
-  //   currencyId: "INR",
-  //   currencyClose: false,
-  // });
-
-  // const CurrencyValue = (currencySymbols) => {
-  //   setCurrencySymbol(currencySymbols);
-  // };
-  // const setCurrencyIdValue = (currencyIds) => {
-  //   setCurrencyId(currencyIds);
-  // };
-  // const setClosePopUp = (closeCurrency) => {
-  //   setCurrencyData({ ...currencyData, currencyClose: closeCurrency });
-  // };
-  // const openPopUp = (popupOpen) => {
-  //   setCurrencyData({ ...currencyData, currencyClose: popupOpen });
-  // };
-
   const inputs = (inFixedCost, inVariableCost, inPricePerUnit, inQuantity) => {
     setFixedCost(inFixedCost);
     setVariableCost(inVariableCost);
@@ -41,18 +20,7 @@ export default function Home() {
   };
   return (
     <>
-      {/* {currencyData.currencyClose ? (
-        <div className="">
-          <CurrencyPopUp
-            myCurrencySymbol={CurrencyValue}
-            myCurrencyId={setCurrencyIdValue}
-            closeCurrencyPopUp={setClosePopUp}
-          />
-        </div>
-      ) : null} */}
-      <div>
-        <Header />
-      </div>
+      <div>{/* <Header /> */}</div>
       <div className="flex flex-col m-0 h-[60vh] bg-[#fddd9a] w-full">
         <div className="relative block w-[100%] h-[70vh]">
           <div className="h-[20vh] contents">
